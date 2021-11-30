@@ -24,7 +24,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 195, 255, 0.4);
 }
 
 header .name {
