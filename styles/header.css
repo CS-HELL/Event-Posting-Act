@@ -23,7 +23,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: #1b737b;
 }
 
 header .name {
