@@ -15,15 +15,16 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 100px;
+  padding: 10px 100px;
   z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: #1b737b;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 header .name {
@@ -56,6 +57,12 @@ header .navigation li {
 }
 
 header .navigation li:hover, header .name:hover {
-  color: #86b4bc;
+  display: inline-block;
+  color: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  font-weight: bold;
+  cursor: pointer;
+  -moz-text-shadow: 0 0 5px #fff;
+  -webkit-text-shadow: 0 0 5px #fff;
+  text-shadow: 0px 0px 5px #fff;
 }
 /*# sourceMappingURL=header.css.map */
