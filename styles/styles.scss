@@ -1,52 +1,170 @@
-* {
+body {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
-    background-size: cover;
-    font-style: sans-serif;
-    
+    width: 100%;
+    height: 100vh;
+    font-family: montserrat;
+    overflow: hidden;
+    background-color: #7fcec5;
+    background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
 }
 
-.banner-container {
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
+
+
+.main-container {
     padding: 100px 100px 100px;
     min-height: 100vh;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 }
 
-.login-container {
-  width: 750px;
-  height: 370px;
-  background: rgba(0, 195, 255, 0.6);
-  border-radius: 10px;
-  padding: 28px;
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(0, 195, 255, 0.6);
+    border-radius: 10px;
 }
 
-.banner-container .image:hover {
-    transform: scale(1.10);
-    transition: 0.3s ease-in-out;
+.login-form h1 {
+    color: white;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 3px solid white;
 }
+
+.login-form form {
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+form .field {
+    position: relative;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+    color: none;
+}
+
+
+
+.field label {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.field span::before {
+    content: ''; 
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:rgba(0, 195, 255, 0.6);
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    top: -5px;
+    color:rgba(0, 195, 255, 0.6)
+}
+
+input[type='submit'] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background: rgba(0, 115, 150, 0.6);
+    transition: 1s;
+}
+
+input[type='submit']:hover {
+    background: rgba(143, 229, 255, 0.6);
+    color: rgb(0, 74, 134);
+}
+
+.register-link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.register-link a {
+    color: rgba(131, 226, 255, 0.6);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
 
 @media (max-width: 700px) {
     header {
         padding: 10px 20px;
         flex-direction: column;
     }
-    .banner-container {
+
+    .main-container {
         padding: 150px 20px 50px;
         flex-direction: column-reverse;
-    }
-    .banner-container .image {
-        margin-left: 0;
-        max-width: 80%;
-    }
-    .banner-container .content h2 {
-        font-size: 3em;
-        color: #fff;
-    }
-    .banner-container .login-container {
-      flex-direction: column-reverse;
     }
 }
 
@@ -77,19 +195,19 @@
 //     margin: 50px auto;
 //     padding: 0 20px;
 //   }
-  
+
 //   #posts-container .post {
 //     display: flex;
 //   }
-  
+
 //   #posts-container .po-2 {
 //     justify-content: flex-start;
 //   }
-  
+
 //   #posts-container .po-2 {
 //     justify-content: flex-end;
 //   }
-  
+
 //   #posts-container .post section {
 //     background: #ff7878;
 //     border-radius: 5px;
@@ -108,7 +226,7 @@
 //     cursor: pointer;
 //     transition: 0.4s ease-in-out;
 //   }
-  
+
 //   #posts-container .post section::before {
 //     position: absolute;
 //     content: "";
@@ -118,25 +236,24 @@
 //     top: 28px;
 //     transform: rotate(45deg);
 //   }
-  
+
 //   .po-1 section::before {
 //     right: -7px;
 //   }
-  
+
 //   .po-2 section::before {
 //     left: -7px;
 //   }
-  
+
 //   .post section .details-section{
 //     color: lightblue;
 //     display: flex;
 //     justify-content: space-between;
 //   }
-  
+
 //   .post section p {
 //     color: rgb(236, 233, 233);
 //     text-align: left;
 //     line-height: 30px;
 //     margin: 10px 0 17px 0;
 //   }
-
