@@ -46,3 +46,32 @@ function scrollto(div) {
     })
 
   });
+
+
+
+
+
+
+
+  $(document).ready(function() {
+    $("#login").on('click', function() {
+      var username = $("#username").val();
+      var password = $("#username").val();
+
+
+      $.ajax({
+        url: 'php/login.php',
+        method: 'POST',
+        data: {
+          login: 1,
+          usernamePHP: username,
+          passwordPHP: password
+        },
+        success: function (response) {
+
+        },
+        dataType: 'text'
+
+      });
+    });
+  });
