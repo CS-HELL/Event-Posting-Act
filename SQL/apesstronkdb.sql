@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 01, 2021 at 07:18 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Host: 127.0.0.1:3307
+-- Generation Time: Dec 02, 2021 at 03:08 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apestrongdb`
+-- Database: `apesstronkdb`
 --
 
 -- --------------------------------------------------------
@@ -27,16 +27,26 @@ SET time_zone = "+00:00";
 -- Table structure for table `accounts`
 --
 
-CREATE TABLE `accounts` (
-  `Account_ID` int(9) NOT NULL,
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE IF NOT EXISTS `accounts` (
+  `Account_ID` int(9) NOT NULL AUTO_INCREMENT,
   `Account_Username` varchar(20) NOT NULL,
+  `Password` varchar(30) NOT NULL,
   `Bind_First_Name` varchar(20) NOT NULL,
   `Bind Middle Name` varchar(20) NOT NULL,
   `Bind Last Name` varchar(20) NOT NULL,
   `Account Creation Date` varchar(40) NOT NULL,
   `About` varchar(100) NOT NULL,
-  `Likes` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Likes` varchar(100) NOT NULL,
+  PRIMARY KEY (`Account_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`Account_ID`, `Account_Username`, `Password`, `Bind_First_Name`, `Bind Middle Name`, `Bind Last Name`, `Account Creation Date`, `About`, `Likes`) VALUES
+(1, 'root', 'root', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -44,11 +54,14 @@ CREATE TABLE `accounts` (
 -- Table structure for table `posts_events`
 --
 
-CREATE TABLE `posts_events` (
+DROP TABLE IF EXISTS `posts_events`;
+CREATE TABLE IF NOT EXISTS `posts_events` (
   `Post_general_ID` int(9) NOT NULL,
-  `Post_event_ID` int(4) NOT NULL,
+  `Post_event_ID` int(4) NOT NULL AUTO_INCREMENT,
   `Post_Event_Decription` varchar(100) NOT NULL,
-  `Post_Event_Location` varchar(40) NOT NULL
+  `Post_Event_Location` varchar(40) NOT NULL,
+  PRIMARY KEY (`Post_event_ID`),
+  KEY `FK_Posts_Events` (`Post_general_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -57,10 +70,12 @@ CREATE TABLE `posts_events` (
 -- Table structure for table `posts_general`
 --
 
-CREATE TABLE `posts_general` (
-  `Post_general_ID` int(9) NOT NULL,
+DROP TABLE IF EXISTS `posts_general`;
+CREATE TABLE IF NOT EXISTS `posts_general` (
+  `Post_general_ID` int(9) NOT NULL AUTO_INCREMENT,
   `Post_date` varchar(20) NOT NULL,
-  `Post_tags` varchar(20) NOT NULL
+  `Post_tags` varchar(20) NOT NULL,
+  PRIMARY KEY (`Post_general_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -69,10 +84,13 @@ CREATE TABLE `posts_general` (
 -- Table structure for table `posts_polls`
 --
 
-CREATE TABLE `posts_polls` (
+DROP TABLE IF EXISTS `posts_polls`;
+CREATE TABLE IF NOT EXISTS `posts_polls` (
   `Post_general_ID` int(9) NOT NULL,
-  `Post_poll_ID` int(4) NOT NULL,
-  `Post_poll_choices` varchar(1000) NOT NULL
+  `Post_poll_ID` int(4) NOT NULL AUTO_INCREMENT,
+  `Post_poll_choices` varchar(1000) NOT NULL,
+  PRIMARY KEY (`Post_poll_ID`),
+  KEY `FK_Post_Polls` (`Post_general_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -81,82 +99,14 @@ CREATE TABLE `posts_polls` (
 -- Table structure for table `posts_regular`
 --
 
-CREATE TABLE `posts_regular` (
+DROP TABLE IF EXISTS `posts_regular`;
+CREATE TABLE IF NOT EXISTS `posts_regular` (
   `Post_general_ID` int(9) NOT NULL,
-  `Post_regular_ID` int(4) NOT NULL,
-  `Post_regular_main_body` varchar(1000) NOT NULL
+  `Post_regular_ID` int(4) NOT NULL AUTO_INCREMENT,
+  `Post_regular_main_body` varchar(1000) NOT NULL,
+  PRIMARY KEY (`Post_regular_ID`),
+  KEY `FK_Post_Regular` (`Post_general_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `accounts`
---
-ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`Account_ID`);
-
---
--- Indexes for table `posts_events`
---
-ALTER TABLE `posts_events`
-  ADD PRIMARY KEY (`Post_event_ID`),
-  ADD KEY `FK_Posts_Events` (`Post_general_ID`);
-
---
--- Indexes for table `posts_general`
---
-ALTER TABLE `posts_general`
-  ADD PRIMARY KEY (`Post_general_ID`);
-
---
--- Indexes for table `posts_polls`
---
-ALTER TABLE `posts_polls`
-  ADD PRIMARY KEY (`Post_poll_ID`),
-  ADD KEY `FK_Post_Polls` (`Post_general_ID`);
-
---
--- Indexes for table `posts_regular`
---
-ALTER TABLE `posts_regular`
-  ADD PRIMARY KEY (`Post_regular_ID`),
-  ADD KEY `FK_Post_Regular` (`Post_general_ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `accounts`
---
-ALTER TABLE `accounts`
-  MODIFY `Account_ID` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `posts_events`
---
-ALTER TABLE `posts_events`
-  MODIFY `Post_event_ID` int(4) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `posts_general`
---
-ALTER TABLE `posts_general`
-  MODIFY `Post_general_ID` int(9) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `posts_polls`
---
-ALTER TABLE `posts_polls`
-  MODIFY `Post_poll_ID` int(4) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `posts_regular`
---
-ALTER TABLE `posts_regular`
-  MODIFY `Post_regular_ID` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
