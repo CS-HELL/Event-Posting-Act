@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Dec 02, 2021 at 03:08 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.3.21
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 02, 2021 at 06:45 AM
+-- Server version: 5.7.36
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,24 +29,23 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
-  `Account_ID` int(9) NOT NULL AUTO_INCREMENT,
-  `Account_Username` varchar(20) NOT NULL,
+  `UID` int(9) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(8) NOT NULL,
   `Password` varchar(30) NOT NULL,
-  `Bind_First_Name` varchar(20) NOT NULL,
-  `Bind Middle Name` varchar(20) NOT NULL,
-  `Bind Last Name` varchar(20) NOT NULL,
-  `Account Creation Date` varchar(40) NOT NULL,
+  `First_Name` varchar(20) NOT NULL,
+  `Last_Name` varchar(20) NOT NULL,
+  `Account_Creation_Date` varchar(40) NOT NULL,
   `About` varchar(100) NOT NULL,
-  `Likes` varchar(100) NOT NULL,
-  PRIMARY KEY (`Account_ID`)
+  PRIMARY KEY (`UID`),
+  UNIQUE KEY `Username` (`Username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`Account_ID`, `Account_Username`, `Password`, `Bind_First_Name`, `Bind Middle Name`, `Bind Last Name`, `Account Creation Date`, `About`, `Likes`) VALUES
-(1, 'root', 'root', '', '', '', '', '', '');
+INSERT INTO `accounts` (`UID`, `Username`, `Password`, `First_Name`, `Last_Name`, `Account_Creation_Date`, `About`) VALUES
+(1, 'root', 'root', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers');
 
 -- --------------------------------------------------------
 
