@@ -8,7 +8,7 @@ session_start();
         $firstname = $_POST['first-name'];
         $lastname = $_POST['last-name'];
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         $date = date('m/d/Y');
         $about = 'CSnoob';
         $sql = "INSERT INTO accounts (Username, Password, First_Name, Last_Name, Account_Creation_Date, About) VALUES ('$username', '$password', '$firstname', '$lastname', '$date', '$about')";

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 03, 2021 at 04:01 PM
+-- Generation Time: Dec 03, 2021 at 04:37 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `About` varchar(100) NOT NULL,
   PRIMARY KEY (`UID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accounts`
@@ -46,10 +46,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 
 INSERT INTO `accounts` (`UID`, `Username`, `Password`, `First_Name`, `Last_Name`, `Account_Creation_Date`, `About`) VALUES
 (1, 'root', '63a9f0ea7bb98050796b649e85481845', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers'),
-(2, 'Saiph', 'yeet', 'Bryan', 'Capistrano', '12/3/2021', 'CSboi'),
-(4, 'Aya', 'yeet2', 'Ayaya', 'Kams', '12/03/2021', 'CSnoob'),
-(5, 'Teng', 'teng', 'Austin', 'Andres', '12/03/2021', 'CSnoob'),
-(6, 'Iidolo', 'root', 'Jose ', 'Rizal', '12/03/2021', 'CSnoob');
+(13, 'Hecker', '47032d3c0a9a726c7c967671d4a6eec4', 'Hecker', 'Men', '12/03/2021', 'CSnoob');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
