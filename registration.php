@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-    $host = "localhost";
-    $dbuser = "root";
-    $dbpass = "";
-    $db = "apesstronkdb";
-
-    $accept = false;
-
-    $con = new mysqli($host, $dbuser, $dbpass, $db);
-    if($con->connect_error) {
-        die("Failed to connect : " .$con->connect_error);
-    } 
     include("php/dbconnectionHandler.php");
     include("php/functions.php");
 
@@ -25,16 +13,8 @@ session_start();
         $about = 'CSnoob';
         $sql = "INSERT INTO accounts (Username, Password, First_Name, Last_Name, Account_Creation_Date, About) VALUES ('$username', '$password', '$firstname', '$lastname', '$date', '$about')";
 
-        echo 'reached';
-
         $con -> query($sql);
-        //$run = mysqli_info($con, $sql) or die(mysqli_error( $con));
-
-        //if($run){
-        //    echo 'Data saved';
-        //} else {
-        //    echo 'Error';
-        //}
+        echo '<script>alert("New account added successfully!")</script>';
     }
 ?>
 
@@ -64,7 +44,7 @@ session_start();
             <div class="field reg-field"><input type="password" id="password" name="password" required><label>Password</label><span></span></div>
             <div class="field reg-field"><input type="password" id="cpassword" name="cpassword" required><label>Confirm Password</label><span></span></div>
             <input type="submit" value="Confirm" id="login">
-            <a class="back" href="login.php">🡠Back to Login</a>
+            <a class="back" href="login.html">🡠Back to Login</a>
         </form>
     </div>
 </div>

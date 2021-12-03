@@ -95,6 +95,23 @@ body {
     color: rgb(0, 74, 134);
 }
 
+#login {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background: rgba(0, 115, 150, 0.6);
+    transition: 1s;
+}
+
+#login:hover {
+    background: rgba(143, 229, 255, 0.6);
+    color: rgb(0, 74, 134);
+}
+
 
 
 
