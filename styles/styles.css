@@ -168,4 +168,35 @@ input[type='submit']:hover {
             flex-direction: column-reverse;
   }
 }
+
+.user-profile .card {
+  border-radius: 10px;
+}
+
+.user-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #0073d1;
+  border-radius: 50%;
+}
+
+.user-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.user-profile .table th,
+.user-profile .table td {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #000;
+}
 /*# sourceMappingURL=styles.css.map */

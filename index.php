@@ -19,10 +19,10 @@ $userdata = check_login($con);
 </head>
 
 <header><a class="name">Apes</a>
-    <ul class="navigation">
-        <li onclick="index.php">Home</li>
-        <li><a href="php/logoutHandler.php">Log Out</a></li>
-    </ul>
+  <ul class="navigation">
+    <li onclick="index.php">Home</li>
+    <li><a href="php/logoutHandler.php">Log Out</a></li>
+  </ul>
 </header>
 
 <body>
@@ -38,7 +38,7 @@ $userdata = check_login($con);
                 <div class="col-lg-4">
                   <div class="card shadow-sm">
                     <div class="card-header bg-transparent text-center">
-                      <img class="profile_img" src="img/defaultpictest.png" alt="test">
+                      <img class="profile_img" src="img/defaultpictest.png" alt="Gawr Gura">
                       <h3>-INSERT NAME HERE-</h3>
                     </div>
                     <div class="card-body">
