@@ -56,8 +56,9 @@ header .navigation li {
   letter-spacing: 2px;
 }
 
-header .navigation li a {
+header .navigation li .ahref {
   text-decoration: none;
+  color: white;
 }
 
 header .navigation li:hover, header .name:hover {

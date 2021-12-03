@@ -1,4 +1,4 @@
-<?php include("php/sessionHandler"); ?>
+<?php include("php/sessionHandler.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +13,8 @@
 
 <header><a class="name">Apes</a>
   <ul class="navigation">
-    <li onclick="index.php">Home</li>
-    <li><a href="php/logoutHandler.php">Log Out</a></li>
+    <li><a class="ahref" href="index.php">Home</a></li>
+    <li><a class="ahref" href="php/logoutHandler.php">Log Out</a></li>
   </ul>
 </header>
 
@@ -32,21 +32,22 @@
                   <div class="card shadow-sm">
                     <div class="card-header bg-transparent text-center">
                       <img class="profile_img" src="img/defaultpictest.png" alt="Gawr Gura">
-                      <h3>-INSERT NAME HERE-</h3>
+                      <h3><?php echo "$userdata[Username]"; ?></h3>
                     </div>
                     <div class="card-body">
-                      <p class="mb-0"><strong class="pr-1">Account ID:</strong>-INSERT-</p>
-                      <p class="mb-0"><strong class="pr-1">Account Creation Date:</strong>-INSERT-</p>
-                      <p class="mb-0"><strong class="pr-1">About:</strong>-INSERT-</p>
+                      <p class="mb-0"><strong class="pr-1">Name:</strong><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></>
+                      <p class="mb-0"><strong class="pr-1">Account Creation Date:</strong><?php echo "$userdata[Account_Creation_Date]"; ?></p>
+                      <p class="mb-0"><strong class="pr-1">About:</strong><?php echo "$userdata[About]"; ?></p>
                       <p class="mb-0"><strong class="pr-1">Likes:</strong>-INSERT-</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-8">
+                <div style="height: 26px"></div>
                   <div class="card shadow-sm">
                     <div class="card-header bg-transparent border-0">
                       <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Regular</h3>
-                      <p>Pangets Lods</p>
+                      <p>Yawa ka teng</p>
                     </div>
                   </div>
 
@@ -56,7 +57,7 @@
                       <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Polls</h3>
                     </div>
                     <div class="card-body pt-0">
-                      <p>Ano next???</p>
+                      <p>BAKANA?!</p>
                     </div>
                   </div>
                   <div style="height: 26px"></div>
@@ -65,7 +66,7 @@
                       <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Events</h3>
                     </div>
                     <div class="card-body pt-0">
-                      <p>Ano next???</p>
+                      <p>177013</p>
                     </div>
                   </div>
                 </div>
