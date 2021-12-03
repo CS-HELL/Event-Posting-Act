@@ -288,3 +288,33 @@ form .field {
 //     line-height: 30px;
 //     margin: 10px 0 17px 0;
 //   }
+
+.user-profile .card {
+    border-radius: 10px;
+}
+
+.user-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid rgb(0, 115, 209);
+    border-radius: 50%;
+}
+
+.user-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+
+.user-profile .table th,
+.user-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+}
