@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </div>
 
             <input type="submit" value="Confirm" id="login">
-            <div class="register-link">Don't have an account? <a href="#">Register</a></div>
+            <div class="register-link">Don't have an account? <a href="registration.php">Register</a></div>
         </form>
     </div>
 </div>
