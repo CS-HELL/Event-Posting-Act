@@ -30,7 +30,7 @@ header {
 header .name {
   position: relative;
   font-size: 1.5em;
-  color: #fff;
+  color: #28313b;
   text-decoration: none;
   font-weight: 600;
 }
@@ -54,6 +54,11 @@ header .navigation li {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 2px;
+}
+
+header .navigation li .ahref {
+  text-decoration: none;
+  color: white;
 }
 
 header .navigation li:hover, header .name:hover {
