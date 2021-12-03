@@ -1,11 +1,4 @@
-<?php
-session_start();
-
-include("php/dbconnectionHandler.php");
-include("php/functions.php");
-
-$userdata = check_login($con);
-?>
+<?php include("php/sessionHandler"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -17,13 +10,17 @@ $userdata = check_login($con);
 </head>
 <header><a class="name">Apes</a>
     <ul class="navigation">
-        <li onclick="index.php">Home</li>
-        <li><a href="php/logoutHandler.php">Log Out</a></li>
+        <li><a class="ahref" href="index.php">Home</a></li>
+        <li><a class="ahref" href="php/logoutHandler.php">Log Out</a></li>
     </ul>
 </header>
-<div class="main-container">
-    Hello, <?php echo "<h1>$userdata[First_Name]</h1>"; ?>
-</div>
+
+<body>
+    <div class="main-container">
+        Hello, <?php echo "<h1>$userdata[First_Name]</h1>"; ?>
+    </div>
+</body>
+
 <footer></footer>
 
 </html>

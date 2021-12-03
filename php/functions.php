@@ -13,7 +13,7 @@ function check_login($con) {
         }
     }
 
-    header("Location: login.php");
+    header("Location: login.html");
     die;
 
 }
