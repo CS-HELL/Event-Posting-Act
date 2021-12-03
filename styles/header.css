@@ -56,6 +56,10 @@ header .navigation li {
   letter-spacing: 2px;
 }
 
+header .navigation li a {
+  text-decoration: none;
+}
+
 header .navigation li:hover, header .name:hover {
   display: inline-block;
   color: linear-gradient(315deg, #485461 0%, #28313b 74%);

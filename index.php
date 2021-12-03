@@ -1,11 +1,4 @@
-<?php
-session_start();
-
-include("php/dbconnectionHandler.php");
-include("php/functions.php");
-
-$userdata = check_login($con);
-?>
+<?php include("php/sessionHandler"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,6 +77,7 @@ $userdata = check_login($con);
     </div>
   </section>
 </body>
+<footer></footer>
 
 </html>
 <script src="js/index.js" type="text/javascript"></script>
