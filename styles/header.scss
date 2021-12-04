@@ -1,8 +1,8 @@
-* {
+header {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 // Sticky Header .scss
@@ -18,15 +18,16 @@ header {
     z-index: 10;
     position: sticky;
     top: 0;
-    background: rgba(0, 195, 255, 0.6);
+    background: rgba(51, 58, 97, 0.664);
 }
 
 header .name {
     position: relative;
     font-size: 1.5em;
-    color:#28313b;
+    color:#e7e7e7;
     text-decoration: none;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 header .navigation {
@@ -42,7 +43,7 @@ header .navigation li {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 header .navigation li .ahref {
@@ -53,9 +54,21 @@ header .navigation li .ahref {
 header .navigation li:hover, header .name:hover{
     display: inline-block;
     color: linear-gradient(315deg, #485461 0%, #28313b 74%);
-    font-weight: bold;
     cursor: pointer;
     -moz-text-shadow: 0 0 5px #fff;
     -webkit-text-shadow: 0 0 5px #fff;
     text-shadow: 0px 0px 5px #fff;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    header .name {
+        padding: 0px 40px 0px 40px;
+    }
+
+   
 }

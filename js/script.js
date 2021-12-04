@@ -24,6 +24,7 @@ $(document).ready(function () {
   });
 });
 
+
 // function scrollto(div) {
 //     $('html,body').animate({
 //       scrollTop: $("#"+div).offset().top

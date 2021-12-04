@@ -12,7 +12,7 @@ session_start();
         $date = date('m/d/Y');
         $about = 'CSnoob';
         $sql = "INSERT INTO accounts (Username, Password, First_Name, Last_Name, Account_Creation_Date, About) VALUES ('$username', '$password', '$firstname', '$lastname', '$date', '$about')";
-
+    
         $con -> query($sql);
         echo '<script>alert("New account added successfully!")</script>';
     }
@@ -28,7 +28,7 @@ session_start();
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
-<header><a class="name">Apes Registration</a>
+<header><a class="name">AsTronK</a>
     <ul class="navigation">
         <li onclick="scrollto('banner-container');">About Us</li>
     </ul>
