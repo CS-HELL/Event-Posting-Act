@@ -31,7 +31,7 @@
                 <div class="col-lg-4">
                   <div class="card shadow-sm">
                     <div class="card-header bg-transparent text-center">
-                      <img class="profile_img" src="img/defaultpictest.png" alt="Gawr Gura">
+                      <img class="profile_img" src="img/uploadedpfp/defaultpictest.png" alt="Gawr Gura">
                       <h3><?php echo "$userdata[Username]"; ?></h3>
                     </div>
                     <div class="card-body">
