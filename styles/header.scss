@@ -1,6 +1,7 @@
 header {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -14,9 +15,9 @@ header {
     text-align: left;
     align-items: center;
     padding: 10px 100px;
+    z-index: 1;
     position: fixed;
     top: 0;
-    z-index: 1;
 }
 
 header .name {
