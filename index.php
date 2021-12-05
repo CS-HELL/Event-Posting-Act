@@ -37,18 +37,6 @@
     </div>
     <div class="middle-content">
       <div class="[ panel panel-default ] panel-post">
-        <div class="dropdown">
-          <span class="dropdown-toggle" type="button" data-toggle="dropdown">
-            <span class="[ glyphicon glyphicon-chevron-down ]"></span>
-          </span>
-          <ul class="dropdown-menu" role="menu">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-            <li role="presentation" class="divider"></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-          </ul>
-        </div>
         <div class="panel-post-tags">
           <ul>
             <li>#Post Regular</li>
