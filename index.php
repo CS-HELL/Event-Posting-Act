@@ -39,15 +39,13 @@
       <div class="[ panel panel-default ] panel-post">
         <div class="panel-post-tags">
           <ul>
-            <li>#Post Regular</li>
-            <li>#Post Event</li>
-            <li>#Post Poll</li>
+            <li>Post Regular</li>
+            <li>Post Event</li>
+            <li>Post Poll</li>
           </ul>
         </div>
         <div class="panel-heading">
-          <img class="[ img-circle pull-left ]"
-            src="https://yt3.ggpht.com/uMUat6yJL2_Sk6Wg2-yn0fSIqUr_D6aKVNVoWbgeZ8N-edT5QJAusk4PI8nmPgT_DxFDTyl8=s900-c-k-c0x00ffffff-no-rj"
-            alt="" />
+          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
           <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
           <h5><span>06/69/6969</span> </h5>
         </div>
@@ -57,7 +55,7 @@
             Biot ako Biot ako </p>
         </div>
         <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]">Like</button>
+          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
           <button type="button" class="[ btn btn-default ]">Comment</button>
         </div>
       </div>
