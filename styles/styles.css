@@ -411,7 +411,7 @@ form .reg-field {
 }
 
 .panel-post > .panel-post-tags > ul > li:hover {
-  background-color: rgba(51, 58, 97, 0.664);
+  background-color: #333a61;
   color: black;
 }
 
