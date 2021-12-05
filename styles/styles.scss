@@ -4,9 +4,8 @@ body {
     width: 100%;
     height: 100vh;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    overflow: hidden;
     background-size: 400% 400%;
-    background-color:rgba(0, 7, 26, 0.89);
+    background-color: rgba(0, 7, 26, 0.89);
 }
 
 // Main Container of the body
@@ -93,6 +92,7 @@ form .field {
 .reg-form {
     margin-top: 0;
 }
+
 form .reg-field {
     position: relative;
     border-bottom: 2px solid rgba(0, 7, 26, 0.89);
@@ -147,19 +147,19 @@ form .reg-field {
 }
 
 .field span::before {
-    content: ''; 
+    content: '';
     position: absolute;
     top: 40px;
     left: 0;
     width: 100%;
     height: 2px;
-    background:rgba(0, 7, 26, 0.89);
+    background: rgba(0, 7, 26, 0.89);
 }
 
-.field input:focus ~ label,
-.field input:valid ~ label {
+.field input:focus~label,
+.field input:valid~label {
     top: -5px;
-    color:rgba(102, 110, 131, 0.89);
+    color: rgba(102, 110, 131, 0.89);
 }
 
 
@@ -343,11 +343,11 @@ form .reg-field {
 
 
 .container {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     padding: 20px;
     box-sizing: border-box;
-    column-gap: 20px
+    column-gap: 20px;
 }
 
 
@@ -355,8 +355,10 @@ form .reg-field {
 
 
 .container .sidebar-left {
-    background: rgba(51, 58, 97, 0.664);
     position: sticky;
+    -webkit-position: sticky;
+    top: 8%;
+    background: rgba(51, 58, 97, 0.664);
     display: inline-block;
     width: 300px;
     height: 500px;
@@ -384,20 +386,21 @@ form .reg-field {
 }
 
 .container .sidebar-left a:hover {
-   background: rgba(101, 106, 139, 0.959);
-   color: white;
-   border-radius: 20px;
-   padding-left: 50px;
+    background: rgba(101, 106, 139, 0.959);
+    color: white;
+    border-radius: 20px;
+    padding-left: 50px;
 }
 
-.container .sidebar-left span{
-   font-size: 16px;
-   margin-left: 15px;
+.container .sidebar-left span {
+    font-size: 16px;
+    margin-left: 15px;
 }
 
 .container .middle-content {
     background: rgba(51, 58, 97, 0.664);
     position: relative;
+    margin-top: 5%;
     width: 800px;
     min-width: 500px;
     border-radius: 20px;
@@ -406,6 +409,8 @@ form .reg-field {
 .container .sidebar-right {
     background: rgba(51, 58, 97, 0.664);
     position: sticky;
+    -webkit-position: sticky;
+    top: 8%;
     display: inline-block;
     width: 300px;
     height: 500px;
@@ -417,9 +422,10 @@ form .reg-field {
 
 
 
-@media (max-width:1280px) {
+@media (max-width:995px) {
     .container .sidebar-left {
-        width: 100px;
+        width: 95px;
+        min-width: 95px;
         padding: 10px;
         height: 330px;
     }
@@ -434,9 +440,9 @@ form .reg-field {
 
     .container .sidebar-left a:hover {
         padding-left: 30px;
-     }
+    }
 
-     .container .sidebar-right {
+    .container .sidebar-right {
         display: none;
     }
 }
@@ -452,34 +458,41 @@ form .reg-field {
     border: 2px solid rgba(51, 58, 97, 0.664);
     border-radius: 20px;
 }
-.panel-post > .dropdown {
+
+.panel-post>.dropdown {
     position: absolute;
     top: 5px;
     right: 15px;
 }
-.panel-post > .dropdown > span > span {
-    font-size: 10px;   
+
+.panel-post>.dropdown>span>span {
+    font-size: 10px;
 }
-.panel-post > .dropdown > .dropdown-menu {
+
+.panel-post>.dropdown>.dropdown-menu {
     left: initial;
     right: 0px;
     border-radius: 2px;
 }
-.panel-post > .panel-post-tags {
+
+.panel-post>.panel-post-tags {
     border-radius: 20px;
     position: absolute;
     top: 35px;
     right: -3px;
 }
-.panel-post > .panel-post-tags > ul {
+
+.panel-post>.panel-post-tags>ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
 }
-.panel-post > .panel-post-tags > ul:hover {
+
+.panel-post>.panel-post-tags>ul:hover {
     border-radius: 20px;
 }
-.panel-post > .panel-post-tags > ul > li {
+
+.panel-post>.panel-post-tags>ul>li {
     border-radius: 20px;
     display: block;
     right: 0px;
@@ -489,41 +502,48 @@ form .reg-field {
     font-size: 12px;
     overflow: hidden;
 }
-.panel-post > .panel-post-tags > ul > li::after {
+
+.panel-post>.panel-post-tags>ul>li::after {
     border-radius: 20px;
-    content:"";
+    content: "";
     position: absolute;
     top: 0px;
     right: 0px;
     height: 100%;
-	border-right: 3px solid rgba(51, 58, 97, 0.664);
+    border-right: 3px solid rgba(51, 58, 97, 0.664);
 }
-.panel-post > .panel-post-tags > ul:hover > li,
-.panel-post > .panel-post-tags > ul > li:first-child {
+
+.panel-post>.panel-post-tags>ul:hover>li,
+.panel-post>.panel-post-tags>ul>li:first-child {
     padding: 5px 15px 5px 10px;
     width: auto;
-    cursor: pointer;    
+    cursor: pointer;
     margin-left: auto;
 }
-.panel-post > .panel-post-tags > ul:hover > li {
-    background-color: rgb(255, 255, 255);   
+
+.panel-post>.panel-post-tags>ul:hover>li {
+    background-color: rgb(255, 255, 255);
 }
-.panel-post > .panel-post-tags > ul > li:hover {
+
+.panel-post>.panel-post-tags>ul>li:hover {
     background-color: rgba(51, 58, 97, 1);
     color: rgb(0, 0, 0);
 }
-.panel-post > .panel-heading,
-.panel-post > .panel-footer {
+
+.panel-post>.panel-heading,
+.panel-post>.panel-footer {
     border-radius: 20px;
     border-color: white;
     background-color: white;
 }
-.panel-post > .panel-heading {
-    margin-top: 15px;    
-    padding-bottom: 5px; 
+
+.panel-post>.panel-heading {
+    margin-top: 15px;
+    padding-bottom: 5px;
 }
-.panel-post > .panel-heading > img {
-    margin-top: 1px; 
+
+.panel-post>.panel-heading>img {
+    margin-top: 1px;
     margin-right: 10px;
     height: 50px;
     width: 50px;
@@ -531,56 +551,62 @@ form .reg-field {
     border: 2px solid rgba(0, 7, 26, 0.89);
 
 }
-.panel-post > .panel-heading > h3 {
+
+.panel-post>.panel-heading>h3 {
     margin: 0px;
     font-size: 14px;
     font-weight: 700;
 }
-.panel-post > .panel-heading > h5 {
+
+.panel-post>.panel-heading>h5 {
     color: rgb(153, 153, 153);
     font-size: 12px;
     font-weight: 400;
 }
-.panel-post > .panel-body {
+
+.panel-post>.panel-body {
     padding-top: 5px;
     font-size: 13px;
 }
-.panel-post > .panel-body > .panel-post-image {
+
+.panel-post>.panel-body>.panel-post-image {
     display: block;
     text-align: center;
     background-color: rgb(245, 245, 245);
 }
-.panel-post > .panel-body > .panel-post-image > img {
+
+.panel-post>.panel-body>.panel-post-image>img {
     max-width: 10%;
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    margin-top: 1px;  
+    margin-top: 1px;
 }
 
-.panel-post > .panel-footer {
+.panel-post>.panel-footer {
     font-size: 14px;
     font-weight: 700;
     min-height: 54px;
 }
 
 
-.panel-post > .panel-footer > .btn {
+.panel-post>.panel-footer>.btn {
     float: left;
     margin-right: 8px;
 }
 
 .panel-post .btn {
-    border-radius: 20px;   
+    border-radius: 20px;
 }
+
 .panel-post .btn-default {
     border: 1px solid rgb(217, 217, 217);
     box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 0px 0px;
 }
-.panel-post .btn-default:hover, 
-.panel-post .btn-default:focus, 
+
+.panel-post .btn-default:hover,
+.panel-post .btn-default:focus,
 .panel-post .btn-default:active {
     background-color: rgb(255, 255, 255);
-    border-color: rgb(0, 0, 0);    
+    border-color: rgb(0, 0, 0);
 }
-

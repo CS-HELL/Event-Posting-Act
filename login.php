@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +15,7 @@
 </header>
 
 
-<body>
+<body style="overflow: hidden;">
     <div class="main-container">
         <div class="login-form">
             <h1>Login</h1>

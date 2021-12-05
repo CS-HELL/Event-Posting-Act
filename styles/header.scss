@@ -1,24 +1,22 @@
 header {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 // Sticky Header .scss
 
 header {
-    position: absolute;
+    background: rgb(51, 58, 97);
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     text-align: left;
     align-items: center;
     padding: 10px 100px;
-    z-index: 10;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: rgba(51, 58, 97, 0.664);
+    z-index: 1;
 }
 
 header .name {
@@ -60,7 +58,7 @@ header .navigation li:hover, header .name:hover{
     text-shadow: 0px 0px 5px #fff;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
     header {
         padding: 10px 20px;
         flex-direction: column;
@@ -69,6 +67,4 @@ header .navigation li:hover, header .name:hover{
     header .name {
         padding: 0px 40px 0px 40px;
     }
-
-   
 }
