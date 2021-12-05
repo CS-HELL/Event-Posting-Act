@@ -36,6 +36,8 @@ $(document).ready(function () {
       });
   });
 
+  // Load posts
+  $("#mid-content").load("php/load-postsHandler.php");
 
 
 });

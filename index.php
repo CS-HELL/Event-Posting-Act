@@ -1,4 +1,8 @@
-<?php include("php/sessionHandler.php"); ?>
+<?php 
+include("php/sessionHandler.php"); 
+include('php/dbconnectionHandler.php');
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -34,288 +38,30 @@
       <a href="#"><i class="fa fa-dungeon"></i><span>Events</span></a>
       <a href="php/logoutHandler.php"><i class="fa fa-sign-out-alt"></i><span>Sign out</span></a>
     </div>
-    <div class="middle-content">
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
-      <div class="[ panel panel-default ] panel-post">
-        <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div>
-        <div class="panel-heading">
-          <img class="[ img-circle pull-left ]" src="img\uploadedpfp\defaultpictest.png" alt="" />
-          <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
-          <h5><span>06/69/6969</span> </h5>
-        </div>
-        <div class="panel-body">
-          <p>Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako Biot ako
-            Biot ako Biot ako </p>
-        </div>
-        <div class="panel-footer">
-          <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-          <button type="button" class="[ btn btn-default ]">Comment</button>
-        </div>
-      </div>
+
+    <div class="middle-content" id="mid-content">
+      
+
+      
     </div>
+
     <div class="sidebar-right"></div>
   </div>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/script.js"></script>
+
 <footer></footer>
 
 </html>
+
+
+<!-- <div class="panel-post-tags">
+          <ul>
+            <li>Post Regular</li>
+            <li>Post Event</li>
+            <li>Post Poll</li>
+          </ul>
+        </div> -->

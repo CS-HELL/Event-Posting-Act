@@ -526,6 +526,7 @@ form .reg-field {
     padding: 20px;
     box-sizing: border-box;
     column-gap: 20px;
+    padding-top: 4%;
 }
 
 
@@ -535,7 +536,7 @@ form .reg-field {
 .container .sidebar-left {
     position: sticky;
     -webkit-position: sticky;
-    top: 8%;
+    margin-top: 5%;
     background: rgba(51, 58, 97, 0.664);
     display: inline-block;
     width: 300px;
@@ -588,7 +589,7 @@ form .reg-field {
     background: rgba(51, 58, 97, 0.664);
     position: sticky;
     -webkit-position: sticky;
-    top: 8%;
+    margin-top: 5%;
     display: inline-block;
     width: 300px;
     height: 500px;
