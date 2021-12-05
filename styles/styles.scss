@@ -8,18 +8,18 @@ body {
     background-color: rgba(0, 7, 26, 0.89);
 }
 
-// Main Container of the body
-
+// Main Container of the body - login
 .main-container {
-    padding: 100px 100px 100px;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
+.main-container#blur.active{
+    filter: blur(300px);
+}
 
 // Login form
-
 .login-form {
     position: absolute;
     top: 50%;
@@ -60,6 +60,7 @@ body {
     color: rgb(238, 238, 238);
 }
 
+// Login Button
 #login {
     width: 100%;
     height: 50px;
@@ -77,11 +78,172 @@ body {
     color: rgb(0, 74, 134);
 }
 
+// Fields of the login form
+form .field {
+    color: white;
+    position: relative;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.field input {
+    color: white;
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+    color: none;
+}
+
+.field label {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 7, 26, 0.89);
+}
+
+.field input:focus~label,
+.field input:valid~label {
+    top: -5px;
+    color: rgba(102, 110, 131, 0.89);
+}
+
+// Registration Link
+.register-link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.register-link a {
+    color: rgba(105, 105, 105, 0.89);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+// Login status messages
+#loginmessage {
+    font-weight: bold;
+    color: rgb(189, 0, 0);
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+// Registration Form
+#popup {
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+}
+#popup.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.reg-form {
+    margin-top: 0;
+}
+
+form .reg-field {
+    position: relative;
+    border-bottom: 2px solid rgba(0, 7, 26, 0.89);
+    margin: 30px 0;
+    display: flex;
+    width: 40%;
+    float: left;
+    margin-left: 6%;
+    margin-top: 2px;
+}
+
+.registration-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(51, 58, 97, 0.664);
+    border-radius: 10px;
+}
+
+.registration-form h1 {
+    color: white;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-bottom: 2px solid rgba(0, 7, 26, 0.89);
+}
+
+.registration-form form {
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+.registration-form #register {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background: rgba(0, 7, 26, 0.295);
+    transition: 0.5s;
+}
+
+.registration-form #register:hover {
+    background: rgba(146, 146, 146, 0.295);
+    color: rgb(238, 238, 238);
+}
+
+#register {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background: rgba(0, 115, 150, 0.6);
+    transition: 0.5s;
+}
+
+#register:hover {
+    background: rgba(143, 229, 255, 0.6);
+    color: rgb(0, 74, 134);
+}
+
 
 
 
 // Fields of the login form
-
 form .field {
     color: white;
     position: relative;
@@ -162,9 +324,6 @@ form .reg-field {
     color: rgba(102, 110, 131, 0.89);
 }
 
-
-
-
 // Registration Link
 
 .register-link {
@@ -184,10 +343,6 @@ form .reg-field {
     text-decoration: underline;
 }
 
-
-
-
-
 // Login status messages
 #loginmessage {
     font-weight: bold;
@@ -195,6 +350,29 @@ form .reg-field {
     font-size: 16px;
     padding-top: 20px;
 }
+
+.login-link {
+    margin: 30px 15px;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+}
+
+.login-link a {
+    color: rgba(105, 105, 105, 0.89);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+
+
+
+
+
 
 
 

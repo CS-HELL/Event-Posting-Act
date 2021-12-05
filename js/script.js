@@ -1,4 +1,17 @@
 $(document).ready(function () {
+  $("#regFormButton").click(function () {
+    var blur = document.getElementById("blur");
+    blur.classList.toggle('active');
+    var popup = document.getElementById("popup");
+    popup.classList.toggle('active');
+  });
+
+  $("#loginFormButton").click(function () {
+    var blur = document.getElementById("blur");
+    blur.classList.toggle('active');
+    var popup = document.getElementById("popup");
+    popup.classList.toggle('active');
+  });
 
   $("#loginbutton").click(function () {
     //$("#loginstatus").html("<img src='img/blines.gif'>");
@@ -22,8 +35,15 @@ $(document).ready(function () {
         }
       });
   });
+
+
+
 });
 
+
+$(document).ready(function () {
+  
+});
 
 // function scrollto(div) {
 //     $('html,body').animate({
