@@ -44,7 +44,7 @@ session_start();
             <div class="field reg-field"><input type="password" id="password" name="password" required><label>Password</label><span></span></div>
             <div class="field reg-field"><input type="password" id="cpassword" name="cpassword" required><label>Confirm Password</label><span></span></div>
             <input type="submit" value="Confirm" id="login">
-            <a class="back" href="login.html">🡠Back to Login</a>
+            <a class="back" href="login.php">🡠Back to Login</a>
         </form>
     </div>
 </div>

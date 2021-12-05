@@ -20,64 +20,34 @@
 </header>
 
 <body>
-  <section>
-    <div class="rt-container">
-      <div class="col-rt-12">
-        <div class="Scriptcontent">
 
-          <!-- Student Profile -->
-          <div class="user-profile py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="card shadow-sm">
-                    <div class="card-header bg-transparent text-center">
-                      <img class="profile_img" src="img/uploadedpfp/defaultpictest.png" alt="Gawr Gura">
-                      <h3><?php echo "$userdata[Username]"; ?></h3>
-                    </div>
-                    <div class="card-body">
-                      <p class="mb-0"><strong class="pr-1">Name:</strong><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></>
-                      <p class="mb-0"><strong class="pr-1">Account Creation Date:</strong><?php echo "$userdata[Account_Creation_Date]"; ?></p>
-                      <p class="mb-0"><strong class="pr-1">About:</strong><?php echo "$userdata[About]"; ?></p>
-                      <p class="mb-0"><strong class="pr-1">Likes:</strong>-INSERT-</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-8">
-                  <div style="height: 26px"></div>
-                  <div class="card shadow-sm">
-                    <div class="card-header bg-transparent border-0">
-                      <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Regular</h3>
-                      <p>Yawa ka teng</p>
-                    </div>
-                  </div>
-
-                  <div style="height: 26px"></div>
-                  <div class="card shadow-sm">
-                    <div class="card-header bg-transparent border-0">
-                      <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Polls</h3>
-                    </div>
-                    <div class="card-body pt-0">
-                      <p>BAKANA?!</p>
-                    </div>
-                  </div>
-                  <div style="height: 26px"></div>
-                  <div class="card shadow-sm">
-                    <div class="card-header bg-transparent border-0">
-                      <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Events</h3>
-                    </div>
-                    <div class="card-body pt-0">
-                      <p>177013</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="container">
+    <div class="sidebar-left">
+      <center>
+        <img src="img/uploadedpfp/defaultpictest.png"><br><br>
+        <h3>Gawr Gura</h3>
+      </center>
+      <br>
+      <a href="#"><i class="fa fa-pen-alt"></i><span>Post Now</span></a>
+      <a href="#"><i class="fa fa-pied-piper-square"></i><span>Posts</span></a>
+      <a href="#"><i class="fa fa-list-ul"></i><span>Polls</span></a>
+      <a href="#"><i class="fa fa-dungeon"></i><span>Events</span></a>
+      <a href="#"><i class="fa fa-sign-out-alt"></i><span>Sign out</span></a>
+    </div>
+    <div class="middle-content">
+      <div class="col-lg-8">
+        <div style="height: 26px"></div>
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Posts Regular</h3>
+            <p>Yawa ka teng</p>
           </div>
         </div>
       </div>
+      </div>
+      <div class="sidebar-right"></div>
     </div>
-  </section>
+
 </body>
 <footer></footer>
 

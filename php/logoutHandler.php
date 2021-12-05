@@ -5,5 +5,5 @@ if(isset($_SESSION['Username'])){
     unset($_SESSION['Username']);
 }
 
-header("Location: ../login.html");
+header("Location: ../login.php");
 ?>

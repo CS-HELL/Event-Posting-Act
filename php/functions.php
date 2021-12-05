@@ -10,10 +10,11 @@ function check_login($con) {
         if($result && mysqli_num_rows($result) > 0) {
             $userdata = mysqli_fetch_assoc($result);
             return $userdata;
+            
         }
     }
 
-    header("Location: login.html");
+    header("Location: login.php");
     die;
 
 }
