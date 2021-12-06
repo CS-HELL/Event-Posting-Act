@@ -22,7 +22,7 @@
             <h1>Login</h1>
             <form>
                 <!-- <form action="php/loginHandler.php" method="POST"> -->
-                <div class="field"><input type="text" id="username" name="username" autocomplete="off" required><label>Username</label><span></span></div>
+                <div class="field"><input type="text"     id="username" name="username" autocomplete="off" required><label>Username</label><span></span></div>
                 <div class="field"><input type="password" id="password" name="password" required><label>Password</label><span></span></div>
                 <span id="loginstatus"></span>
                 <span id="loginmessage"></span>
@@ -43,14 +43,14 @@
             <a href="#" id="loginFormButton"><i class="fa fa-arrow-circle-left" style="font-size:40px"></i></a>
         </div>
         <h1>Create your Account</h1>
-        <form class="reg-form" action="registration.php" method="post">
-            <div class="field"><input type="text" id="r-first-name" name="r-first-name" autocomplete="off"><label>First Name</label><span></span></div>
-            <div class="field"><input type="text" id="r-last-name" name="r-last-name" autocomplete="off"><label>Last Name</label><span></span></div>
-            <div class="field"><input type="text" id="r-username" name="r-username" autocomplete="off" required><label>Username</label><span></span></div>
-            <div class="field"><input type="email" id="r-email" name="r-email" autocomplete="off" required><label>Email</label><span></span></div>
-            <div class="field"><input type="password" id="r-password" name="r-password" required><label>Password</label><span></span></div>
-            <div class="field"><input type="password" id="r-cpassword" name="r-cpassword" required><label>Confirm Password</label><span></span></div>
-            <input type="submit" value="Register" id="register">
+        <form class="reg-form" action="php/registrationHandler.php" method="post">
+            <div class="field"><input type="text"       id="r-first-name"     name="r-first-name"  autocomplete="nope" required><label>First Name</label><span></span></div>
+            <div class="field"><input type="text"       id="r-last-name"      name="r-last-name"   autocomplete="nope" required><label>Last Name</label><span></span></div>
+            <div class="field"><input type="text"       id="r-username"       name="r-username"    autocomplete="nope" required><label>Username</label><span></span></div>
+            <div class="field"><input type="email"      id="r-email"          name="r-email"       autocomplete="nope" required><label>Email</label><span></span></div>
+            <div class="field"><input type="password"   id="r-password"       name="r-password"                       required><label>Password</label><span></span></div>
+            <div class="field"><input type="password"   id="r-cpassword"      name="r-cpassword"                      required><label>Confirm Password</label><span></span></div>
+            <input type="submit" value="Register"       id="register">
         </form>
     </div>
 

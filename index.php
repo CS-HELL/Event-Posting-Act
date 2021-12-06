@@ -14,6 +14,7 @@ include('php/dbconnectionHandler.php');
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/posts.css">
 </head>
 <header><a class="name">AsTronK</a>
   <ul class="navigation">

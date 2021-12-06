@@ -1,0 +1,172 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background-size: 400% 400%;
+    background-color: rgba(0, 7, 26, 0.89);
+}
+
+//panel-post-container
+.panel-post {
+    
+    background-color: #262c47;
+    border: 1px solid #262c47;
+    position: relative;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.panel-post>.dropdown {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.panel-post>.dropdown>span>span {
+    font-size: 10px;
+}
+
+.panel-post>.dropdown>.dropdown-menu {
+    left: initial;
+    right: 0px;
+    border-radius: 2px;
+}
+
+.panel-post>.panel-post-tags {
+    border-radius: 20px;
+    position: absolute;
+    top: 35px;
+    right: -3px;
+}
+
+.panel-post>.panel-post-tags>ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.panel-post>.panel-post-tags>ul:hover {
+    border-radius: 20px;
+}
+
+.panel-post>.panel-post-tags>ul>li {
+    border-radius: 20px;
+    display: block;
+    right: 0px;
+    width: 0px;
+    padding: 5px 0px 5px 0px;
+    background-color: rgba(59, 66, 105, 0.664);
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.panel-post>.panel-post-tags>ul>li::after {
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    border-right: 3px solid rgba(51, 58, 97, 0.664);
+}
+
+.panel-post>.panel-post-tags>ul:hover>li,
+.panel-post>.panel-post-tags>ul>li:first-child {
+    padding: 5px 15px 5px 10px;
+    width: auto;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.panel-post>.panel-post-tags>ul:hover>li {
+    background-color: rgb(255, 255, 255);
+}
+
+.panel-post>.panel-post-tags>ul>li:hover {
+    background-color: rgba(51, 58, 97, 1);
+    color: rgb(0, 0, 0);
+}
+
+.panel-post>.panel-heading,
+.panel-post>.panel-footer {
+    border-radius: 20px;
+    background-color: #262c47;
+    border: 1px solid #262c47;
+}
+
+.panel-post>.panel-heading {
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+.panel-post>.panel-heading>img {
+    margin-top: -5px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.panel-post>.panel-heading>h3 {
+    margin: 0px;
+    font-size: 14px; 
+    color: rgb(172, 179, 201);
+    font-weight: 700;
+}
+
+.panel-post>.panel-heading>h5 {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.panel-post>.panel-body {
+    margin-top: 1%;
+    color: rgb(255, 255, 255);
+}
+
+.panel-post>.panel-body>.panel-post-image {
+    display: block;
+    text-align: center;
+    background-color: rgba(51, 58, 97, 0.664);
+}
+
+.panel-post>.panel-body>.panel-post-image>img {
+    max-width: 10%;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 1px;
+}
+
+.panel-post>.panel-footer {
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 54px;
+}
+
+
+.panel-post>.panel-footer>.btn {
+    float: left;
+    margin-right: 8px;
+}
+
+.panel-post .btn {
+    border-radius: 20px;
+}
+
+.panel-post .btn-default {
+    color: #ffffff;
+    background-color: #313a5c;
+    border: 1px solid #313a5c;
+    box-shadow: #313a5c;
+}
+
+.panel-post .btn-default:hover,
+.panel-post .btn-default:focus,
+.panel-post .btn-default:active {
+    background-color: #667bc4;
+    border: 1px solid #313a5c;
+}

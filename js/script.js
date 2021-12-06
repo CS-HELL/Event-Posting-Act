@@ -37,7 +37,7 @@ $(document).ready(function () {
   });
 
   // Load posts
-  $("#mid-content").load("php/load-postsHandler.php");
+  $("#mid-content").load("php/postsHandler.php");
 
 
 });
