@@ -30,9 +30,6 @@
                 <span id="loginstatus"></span>
                 <span id="loginmessage"></span>
                 <button type="button" id="loginbutton">Confirm</button>
-
-
-                <!-- <div class="register-link">Don't have an account? <a href="registration.php">Register</a></div> -->
                 <div class="register-link">
                     Don't have an account?
                     <a href="#" id="regFormButton">Register</a>
@@ -46,14 +43,17 @@
             <a href="#" id="loginFormButton"><i class="fa fa-arrow-circle-left" style="font-size:40px"></i></a>
         </div>
         <h1>Create your Account</h1>
-        <form class="reg-form" action="php/registrationHandler.php" method="post">
+        <form>
+            <div class="field"><input type="text" id="r-username" name="r-username" autocomplete="nope" required><label>Username</label><span></span></div>
+            <div class="field"><input type="file" id="r-image" name="r-image"><label></label><span></span></div>
             <div class="field"><input type="text" id="r-first-name" name="r-first-name" autocomplete="nope" required><label>First Name</label><span></span></div>
             <div class="field"><input type="text" id="r-last-name" name="r-last-name" autocomplete="nope" required><label>Last Name</label><span></span></div>
-            <div class="field"><input type="text" id="r-username" name="r-username" autocomplete="nope" required><label>Username</label><span></span></div>
             <div class="field"><input type="email" id="r-email" name="r-email" autocomplete="nope" required><label>Email</label><span></span></div>
             <div class="field"><input type="password" id="r-password" name="r-password" required><label>Password</label><span></span></div>
             <div class="field"><input type="password" id="r-cpassword" name="r-cpassword" required><label>Confirm Password</label><span></span></div>
-            <input type="submit" value="Register" id="register">
+            <span id="regstatus"></span>
+            <span id="regmessage"></span>
+            <button type="button" id="register">Register</button>
         </form>
     </div>
 

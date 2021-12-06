@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 06, 2021 at 10:00 AM
+-- Generation Time: Dec 06, 2021 at 04:02 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -30,9 +30,10 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
   `UID` int(100) NOT NULL AUTO_INCREMENT,
-  `Account_Tyle` enum('Administrator','Organizer','Member') NOT NULL,
+  `Account_Type` enum('Administrator','Organizer','Member') NOT NULL,
   `Username` varchar(8) NOT NULL,
   `Password` varchar(100) NOT NULL,
+  `Profile_Pic` text NOT NULL,
   `First_Name` varchar(20) NOT NULL,
   `Last_Name` varchar(20) NOT NULL,
   `Account_Creation_Date` varchar(40) NOT NULL,
@@ -45,11 +46,11 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`UID`, `Account_Tyle`, `Username`, `Password`, `First_Name`, `Last_Name`, `Account_Creation_Date`, `About`) VALUES
-(1, 'Administrator', 'root', '63a9f0ea7bb98050796b649e85481845', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers'),
-(2, 'Administrator', 'Saiph', '63a9f0ea7bb98050796b649e85481845', 'Bryan', 'Capistrano', '12/3/2021', 'CSboi'),
-(3, 'Administrator', 'Teng', '63a9f0ea7bb98050796b649e85481845', 'Austin', 'Andres', '12/03/2021', 'CSnoob'),
-(4, 'Member', 'Memeber', '63a9f0ea7bb98050796b649e85481845', 'Ara ara', 'Kawaii neko', '11/12/2021', 'Ara ara');
+INSERT INTO `accounts` (`UID`, `Account_Type`, `Username`, `Password`, `Profile_Pic`, `First_Name`, `Last_Name`, `Account_Creation_Date`, `About`) VALUES
+(1, 'Administrator', 'root', '63a9f0ea7bb98050796b649e85481845', 'root_1.jpg', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers'),
+(2, 'Administrator', 'Saiph', '63a9f0ea7bb98050796b649e85481845', 'saiph_1.jpg', 'Bryan', 'Capistrano', '12/3/2021', 'CSboi'),
+(3, 'Administrator', 'Teng', '63a9f0ea7bb98050796b649e85481845', 'teng_1.png', 'Austin', 'Andres', '12/03/2021', 'CSnoob'),
+(4, 'Member', 'Memeber', '63a9f0ea7bb98050796b649e85481845', 'exttra_1.png', 'Ara ara', 'Kawaii neko', '11/12/2021', 'Ara ara');
 
 -- --------------------------------------------------------
 

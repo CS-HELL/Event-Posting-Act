@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
   $("#regFormButton").click(function () {
     var blur = document.getElementById("blur");
     blur.classList.toggle('active');
@@ -15,7 +17,6 @@ $(document).ready(function () {
 
   $("#loginbutton").click(function () {
     //$("#loginstatus").html("<img src='img/blines.gif'>");
-
     var username = $("#username").val();
     var password = $("#password").val();
 
@@ -36,15 +37,57 @@ $(document).ready(function () {
       });
   });
 
-  // Load posts
-  $("#mid-content").load("php/postsHandler.php");
 
+  // NOT YET WORKING
+  $("#register").click(function() {
+    var firstname = $("#r-first-name").val();
+    var lastname = $("#r-last-name").val();
+    var username = $("#r-username").val();
+    var password = $("#r-password").val();
+    var img_name = $("#r-image").val();
+    var img_size = $("#r-image").val();
+    var tmp_name = $("#r-image").val();
+    var error = $("#r-image").val();
+
+    $.post("php/registrationHandler.php", 
+    { firstname:firstname, lastname:lastname, username:username, password:password, 
+      img_name:img_name, img_size:img_size, tmp_name:tmp_name, error:error })
+      .done(function (data) {
+        switch (data) {
+          case "success":
+            window.location = "index.php";
+            break;
+          case "largefile":
+            $("#regmessage").text("File is too large!");
+            $("#register").show();
+            break;
+
+          case "invalidext":
+            $("#regmessage").text("Invalid file!");
+            $("#register").show();
+            break;
+
+          case "unknownerror":
+            $("#regmessage").text("An Error has occurred!");
+            $("#register").show();
+            break;
+          case "error":
+            $("#regmessage").text("Error Error!");
+            $("#register").show();
+            break;
+        }
+      });
+
+
+  })
 
 });
 
 
 $(document).ready(function () {
-  
+  // Load Data for Index
+  $("#mid-content").load("php/postsHandler.php");
+  $("#sidebar-left").load("php/indexHandler.php");
 });
 
 // function scrollto(div) {

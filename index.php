@@ -1,9 +1,3 @@
-<?php
-include("php/sessionHandler.php");
-include('php/dbconnectionHandler.php');
-?>
-
-
 <!DOCTYPE html>
 <html>
 
@@ -33,15 +27,8 @@ include('php/dbconnectionHandler.php');
 
 
   <div class="container">
-    <div class="sidebar-left">
-      <center>
-        <img src="img/uploadedpfp/defaultpictest.png"><br><br>
-        <h3><?php echo "$userdata[Username]"; ?></h3>
-      </center>
-      <br>
-      <a href="#"><i class="fa fa-pen-alt"></i><span>Post Now</span></a>
-      <a href="#"><i class="fa fa-pied-piper-square"></i><span>My Posts</span></a>
-      <a href="#"><i class="fa fa-dungeon"></i><span>Manage Events</span></a>
+    <div class="sidebar-left" id="sidebar-left">
+      <!-- Retrieve User Data -->
       <!-- <a href="php/logoutHandler.php"><i class="fa fa-sign-out-alt"></i><span>Sign out</span></a> -->
     </div>
 
