@@ -2,7 +2,13 @@
 
 include('dbconnectionHandler.php');
 
-$query = "SELECT posts.post_id,posts.post_author_id,accounts.Username,posts.post_date_time,posts.post_tags,posts.likers,content FROM `posts_regular` INNER JOIN `posts` ON posts.post_id = posts_regular.post_id INNER JOIN `accounts` ON accounts.UID = posts.post_author_id;";
+$query = "SELECT posts.post_id,posts.post_author_id,accounts.Username,posts.post_date_time,posts.post_tags,posts.likers,content 
+FROM `posts_regular` 
+INNER JOIN `posts` 
+ON posts.post_id = posts_regular.post_id 
+INNER JOIN `accounts` 
+ON accounts.UID = posts.post_author_id;";
+
 $result = mysqli_query($con, $query);
 if($result && mysqli_num_rows($result) > 0) {
     $postsData = mysqli_fetch_assoc($result);

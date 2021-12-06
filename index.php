@@ -29,7 +29,7 @@ include('php/dbconnectionHandler.php');
     <div class="sidebar-left">
       <center>
         <img src="img/uploadedpfp/defaultpictest.png"><br><br>
-        <h3><?php echo "$userdata[First_Name] $userdata[Last_Name]"; ?></h3>
+        <h3><?php echo "$userdata[Username]"; ?></h3>
       </center>
       <br>
       <a href="#"><i class="fa fa-pen-alt"></i><span>Post Now</span></a>

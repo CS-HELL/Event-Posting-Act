@@ -524,23 +524,20 @@ form .reg-field {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
+    margin-top: 2%;
     box-sizing: border-box;
     column-gap: 20px;
     padding-top: 4%;
 }
 
 
-
-
-
 .container .sidebar-left {
     position: sticky;
     -webkit-position: sticky;
-    margin-top: 5%;
     background: rgba(51, 58, 97, 0.664);
     display: inline-block;
     width: 300px;
-    height: 500px;
+    height: 520px;
     border-radius: 20px;
 }
 
@@ -577,9 +574,8 @@ form .reg-field {
 }
 
 .container .middle-content {
-    background: rgba(51, 58, 97, 0.664);
     position: relative;
-    margin-top: 5%;
+    
     width: 800px;
     min-width: 500px;
     border-radius: 20px;
@@ -589,10 +585,10 @@ form .reg-field {
     background: rgba(51, 58, 97, 0.664);
     position: sticky;
     -webkit-position: sticky;
-    margin-top: 5%;
+    
     display: inline-block;
     width: 300px;
-    height: 500px;
+    height: 520px;
     border-radius: 20px;
 }
 
@@ -628,14 +624,12 @@ form .reg-field {
 
 //panel-post-container
 .panel-post {
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    background-color: white;
+    
+    background-color: #262c47;
+    border: 1px solid #262c47;
     position: relative;
-    border: 2px solid rgba(51, 58, 97, 0.664);
     border-radius: 20px;
+    font-size: 14px;
 }
 
 .panel-post>.dropdown {
@@ -677,7 +671,7 @@ form .reg-field {
     right: 0px;
     width: 0px;
     padding: 5px 0px 5px 0px;
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(59, 66, 105, 0.664);
     font-size: 12px;
     overflow: hidden;
 }
@@ -712,8 +706,8 @@ form .reg-field {
 .panel-post>.panel-heading,
 .panel-post>.panel-footer {
     border-radius: 20px;
-    border-color: white;
-    background-color: white;
+    background-color: #262c47;
+    border: 1px solid #262c47;
 }
 
 .panel-post>.panel-heading {
@@ -722,18 +716,17 @@ form .reg-field {
 }
 
 .panel-post>.panel-heading>img {
-    margin-top: 1px;
+    margin-top: -5px;
     margin-right: 10px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 2px solid rgba(0, 7, 26, 0.89);
-
 }
 
 .panel-post>.panel-heading>h3 {
     margin: 0px;
-    font-size: 14px;
+    font-size: 14px; 
+    color: rgb(72, 111, 218);
     font-weight: 700;
 }
 
@@ -744,14 +737,14 @@ form .reg-field {
 }
 
 .panel-post>.panel-body {
-    padding-top: 5px;
-    font-size: 13px;
+    margin-top: 1%;
+    color: rgb(255, 255, 255);
 }
 
 .panel-post>.panel-body>.panel-post-image {
     display: block;
     text-align: center;
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(51, 58, 97, 0.664);
 }
 
 .panel-post>.panel-body>.panel-post-image>img {
@@ -779,13 +772,15 @@ form .reg-field {
 }
 
 .panel-post .btn-default {
-    border: 1px solid rgb(217, 217, 217);
-    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 0px 0px;
+    color: #ffffff;
+    background-color: #313a5c;
+    border: 1px solid #313a5c;
+    box-shadow: #313a5c;
 }
 
 .panel-post .btn-default:hover,
 .panel-post .btn-default:focus,
 .panel-post .btn-default:active {
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(0, 0, 0);
+    background-color: #667bc4;
+    border: 1px solid #313a5c;
 }
