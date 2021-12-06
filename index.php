@@ -1,5 +1,5 @@
-<?php 
-include("php/sessionHandler.php"); 
+<?php
+include("php/sessionHandler.php");
 include('php/dbconnectionHandler.php');
 ?>
 
@@ -16,10 +16,16 @@ include('php/dbconnectionHandler.php');
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/posts.css">
 </head>
-<header><a class="name">AsTronK</a>
+<header>
+  <a class="name" href="index.php">AsTronK</a>
   <ul class="navigation">
-    <li><a class="ahref" href="index.php">Home</a></li>
-    <li><a class="ahref" href="php/logoutHandler.php">Log Out</a></li>
+    <li><a class="ahref" href="#"><i class="fa fa-bars" style="font-size:23px;"></i></a>
+      <ul>
+        <li><a class="ahref" href="index.php">Home</a></li>
+        <li><a class="ahref" href="#">Profile</a></li>
+        <li><a class="ahref" href="php/logoutHandler.php"><i class="fa fa-sign-out-alt"></i> Sign Out</a></li>
+      </ul>
+    </li>
   </ul>
 </header>
 
@@ -34,16 +40,13 @@ include('php/dbconnectionHandler.php');
       </center>
       <br>
       <a href="#"><i class="fa fa-pen-alt"></i><span>Post Now</span></a>
-      <a href="#"><i class="fa fa-pied-piper-square"></i><span>Posts</span></a>
-      <a href="#"><i class="fa fa-list-ul"></i><span>Polls</span></a>
-      <a href="#"><i class="fa fa-dungeon"></i><span>Events</span></a>
-      <a href="php/logoutHandler.php"><i class="fa fa-sign-out-alt"></i><span>Sign out</span></a>
+      <a href="#"><i class="fa fa-pied-piper-square"></i><span>My Posts</span></a>
+      <a href="#"><i class="fa fa-dungeon"></i><span>Manage Events</span></a>
+      <!-- <a href="php/logoutHandler.php"><i class="fa fa-sign-out-alt"></i><span>Sign out</span></a> -->
     </div>
 
     <div class="middle-content" id="mid-content">
-      
-
-      
+      <!-- Retrieve Posts -->
     </div>
 
     <div class="sidebar-right"></div>

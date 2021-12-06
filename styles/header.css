@@ -1,66 +1,95 @@
-header {
+header * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: white;
   font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 header {
   background: #333a61;
+  padding: 10px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px 100px;
   z-index: 1;
   position: fixed;
-  top: 0;
+}
+
+header:after {
+  content: '';
+  clear: both;
+  display: table;
 }
 
 header .name {
   position: relative;
-  font-size: 1.5em;
+  font-size: 30px;
   color: #e7e7e7;
   text-decoration: none;
   font-weight: 600;
+  margin-left: 2%;
+  line-height: 50px;
   letter-spacing: 1px;
 }
 
-header .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 10px 0;
+header ul {
+  float: right;
+  list-style: none;
+  margin-right: 2%;
+  position: relative;
+  z-index: 1;
 }
 
-header .navigation li {
-  list-style: none;
-  margin: 0 10px;
-  color: #fff;
+header ul li {
+  display: inline-block;
+}
+
+header ul li .ahref {
+  color: white;
   text-decoration: none;
+  line-height: 50px;
   font-weight: 500;
   letter-spacing: 1px;
+  padding: 5px;
 }
 
-header .navigation li .ahref {
-  text-decoration: none;
+header ul ul {
+  position: absolute;
+  opacity: 0;
+  top: 60px;
+  right: 0;
+  border: 3px solid #384050;
+  background: #333a61;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+header ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 120px;
+  float: none;
+  display: list-item;
+}
+
+header ul ul li:hover {
+  background: rgba(101, 106, 139, 0.959);
   color: white;
+  border-radius: 10px;
 }
 
-header .navigation li:hover, header .name:hover {
+header ul li:hover,
+header .name:hover {
   display: inline-block;
   color: linear-gradient(315deg, #485461 0%, #28313b 74%);
   cursor: pointer;

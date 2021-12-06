@@ -376,23 +376,6 @@ form .reg-field {
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
-  header {
-    padding: 10px 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .main-container {
-    padding: 150px 20px 50px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-}
-
 .user-profile .card {
   border-radius: 10px;
 }
@@ -441,7 +424,7 @@ form .reg-field {
 .container .sidebar-left {
   position: sticky;
   -webkit-position: -webkit-sticky;
-  top: 8%;
+  top: 10%;
   background: rgba(51, 58, 97, 0.664);
   display: inline-block;
   width: 300px;
@@ -454,7 +437,7 @@ form .reg-field {
   width: 120px;
   border-radius: 50%;
   margin-top: 30px;
-  border: 3px solid rgba(0, 7, 26, 0.89);
+  border: 3px solid #9aa3b6;
 }
 
 .container .sidebar-left center h3 {
@@ -473,7 +456,7 @@ form .reg-field {
 .container .sidebar-left a:hover {
   background: rgba(101, 106, 139, 0.959);
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   padding-left: 50px;
 }
 
@@ -484,9 +467,9 @@ form .reg-field {
 
 .container .middle-content {
   position: relative;
-  margin-top: 5%;
   width: 800px;
   min-width: 500px;
+  margin-top: 80px;
   border-radius: 20px;
 }
 
@@ -494,17 +477,21 @@ form .reg-field {
   background: rgba(51, 58, 97, 0.664);
   position: sticky;
   -webkit-position: -webkit-sticky;
-  top: 8%;
+  top: 10%;
   display: inline-block;
   width: 300px;
   height: 500px;
   border-radius: 20px;
 }
 
-@media (max-width: 995px) {
+@media (max-width: 1200px) {
+  .container .middle-content {
+    margin-top: 18%;
+  }
   .container .sidebar-left {
     width: 95px;
     min-width: 95px;
+    top: 15%;
     padding: 10px;
     height: 330px;
   }
@@ -519,6 +506,20 @@ form .reg-field {
   }
   .container .sidebar-right {
     display: none;
+  }
+  header {
+    padding: 10px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-container {
+    padding: 150px 20px 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 /*# sourceMappingURL=styles.css.map */
