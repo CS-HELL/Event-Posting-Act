@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("dbconnectionHandler.php");
-include("functions.php");
+include("includes/dbconnectionHandler.php");
+include("includes/functions.php");
 
 $userdata = check_login($con);
 ?>

@@ -1,7 +1,7 @@
 <?php
 
-    include("dbconnectionHandler.php");
-    include("functions.php");
+    include("includes/dbconnectionHandler.php");
+    include("includes/functions.php");
 
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         

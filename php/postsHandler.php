@@ -1,38 +1,18 @@
 <?php 
-include('dbconnectionHandler.php');
 
+include('includes/dbconnectionHandler.php');
+include('includes/functions.php');
 
-$query = "SELECT post_id,post_author_uid,accounts.Username,accounts.Profile_Pic,post_type,post_datetime,post_title,post_content,likers_uid
-FROM `user_posts` 
-INNER JOIN `accounts` 
-ON accounts.UID = user_posts.post_author_uid";
+$postResults = retrieve_posts($con);
+$postArray = array();
 
-$result = mysqli_query($con, $query);
-if(mysqli_num_rows($result) > 0) {
-  while($postsData = mysqli_fetch_assoc($result)){
-    $img_path = "img/uploadedpfp/".$postsData['Profile_Pic'];
-      echo <<<END
-      <div class="[ panel panel-default ] panel-post">
-      <div class="panel-heading">
-        <img class="[ img-circle pull-left ]" src="$img_path" alt="" />
-        <h3>$postsData[Username]</h3>
-        <h5><span>$postsData[post_datetime]</span> </h5>
-      </div>
-      <div class="panel-body">
-        <p><b>$postsData[post_title]</b></p>
-        <p>$postsData[post_content]</p>
-      </div>
-      <div class="panel-footer">
-        <button type="button" class="[ btn btn-default ]"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-        <button type="button" class="[ btn btn-default ]">Comment</button>
-      </div>
-      </div>
-      END;
+if(mysqli_num_rows($postResults) > 0) {
+  while($postData = mysqli_fetch_assoc($postResults)){
+      $postArray[] = $postData;
   }
+  echo json_encode($postArray);
 } else {
   echo "End of Posts";
 }
-
-      
 
 ?>
