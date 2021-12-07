@@ -29,7 +29,7 @@ header .name {
   color: #e7e7e7;
   text-decoration: none;
   font-weight: 600;
-  margin-left: 2%;
+  margin-left: 23.5%;
   line-height: 50px;
   letter-spacing: 1px;
 }
@@ -37,7 +37,7 @@ header .name {
 header ul {
   float: right;
   list-style: none;
-  margin-right: 2%;
+  margin-right: 20.2%;
   position: relative;
   z-index: 1;
 }
@@ -64,7 +64,7 @@ header ul ul {
   background: #333a61;
   visibility: hidden;
   border-radius: 10px;
-  padding: 10px;
+  padding: 2px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -76,8 +76,7 @@ header ul li:hover > ul {
 
 header ul ul li {
   position: relative;
-  margin: 0px;
-  width: 120px;
+  width: 125px;
   float: none;
   display: list-item;
 }

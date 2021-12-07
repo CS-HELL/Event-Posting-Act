@@ -91,9 +91,7 @@ $(document).ready(function () {
     url: "php/profileHandler.php",
     dataType: "html",
     success: function (data) {
-
       var currentUser = JSON.parse(data);
-
       var img_path2 = pathToPfps + currentUser.Profile_Pic;
 
       const content =
@@ -104,12 +102,12 @@ $(document).ready(function () {
           <span></span>
         </center>
         <br>
-        <a href="#"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="#"><i class="fa fa-pen-alt"></i><span>Post Now</span></a>
-        <a href="#"><i class="fa fa-pied-piper-square"></i><span>My Posts</span></a>
-        <a href="#"><i class="fa fa-dungeon"></i><span>Manage Events</span></a>
+        <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;<span>Home</span></a>
+        <a href="#"><i class="fa fa-pen-alt fa-fw" aria-hidden="true"></i>&nbsp;<span>Post Now</span></a>
+        <a href="#"><i class="fa fa-pied-piper-square fa-fw" aria-hidden="true"></i>&nbsp;<span>My Posts</span></a>
+        <a href="#"><i class="fa fa-dungeon fa-fw" aria-hidden="true"></i>&nbsp;<span>Manage Events</span></a>
         `;
-      // Generate a single post each iteration
+      // Generate profile information
       document.getElementById("sidebar-left").innerHTML = content;
     }
   });

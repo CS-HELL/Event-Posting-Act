@@ -516,8 +516,7 @@ form .reg-field {
 }
 
 .container .sidebar-left {
-    position: sticky;
-    top: 0;
+    position: fixed;
     background: rgba(51, 58, 97, 0.664);
     width: 255px;
     height: 500px;
@@ -574,7 +573,7 @@ form .reg-field {
 
 .container .sidebar-right {
     background: rgba(51, 58, 97, 0.664);
-    position: sticky;
+    position: fixed;
     width: 255px;
     height: 500px;
     border-radius: 20px;
