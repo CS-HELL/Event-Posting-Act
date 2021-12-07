@@ -8,6 +8,15 @@ body {
   background-color: rgba(0, 7, 26, 0.89);
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(107, 111, 134, 0.664);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(250, 250, 250, 0.397);
+}
+
 .main-container {
   min-height: 100vh;
   display: -webkit-box;
@@ -415,26 +424,13 @@ form .reg-field {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  padding-top: 6%;
 }
 
 .container .sidebar-left {
-  position: sticky;
-  -webkit-position: -webkit-sticky;
-  top: 10%;
+  position: fixed;
   background: rgba(51, 58, 97, 0.664);
-  display: inline-block;
-  width: 300px;
+  width: 255px;
   height: 500px;
   border-radius: 20px;
 }
@@ -484,29 +480,26 @@ form .reg-field {
 }
 
 .container .middle-content {
-  position: relative;
-  width: 800px;
-  min-width: 500px;
-  margin-top: 80px;
   border-radius: 20px;
 }
 
 .container .sidebar-right {
   background: rgba(51, 58, 97, 0.664);
-  position: sticky;
-  -webkit-position: -webkit-sticky;
-  top: 10%;
-  display: inline-block;
-  width: 300px;
+  position: fixed;
+  width: 255px;
   height: 500px;
   border-radius: 20px;
 }
 
 @media (max-width: 1200px) {
+  .container {
+    padding-top: 18%;
+  }
   .container .middle-content {
-    margin-top: 18%;
+    min-width: 300px;
   }
   .container .sidebar-left {
+    display: none;
     width: 95px;
     min-width: 95px;
     top: 15%;
@@ -533,7 +526,6 @@ form .reg-field {
             flex-direction: column;
   }
   .main-container {
-    padding: 150px 20px 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;

@@ -1,13 +1,14 @@
-<?php 
+
+<?php
 session_start();
-
-include("sessionHandler.php");
 include('dbconnectionHandler.php');
+include('functions.php');
 
-$userdata = retrieve_userdata($con);
-$img_path = "img/uploadedpfp/".$userdata['Profile_Pic'];
 
-      echo <<<END
+    $userdata = get_userdata($con);
+    $img_path = "img/uploadedpfp/".$userdata['Profile_Pic'];
+
+    echo <<<END
       <center>
         <img src="$img_path"><br><br>
         <h3>$userdata[Username]</h3>

@@ -1,12 +1,15 @@
 <?php 
-
 include('dbconnectionHandler.php');
-include('functions.php');
 
-$results = retrieve_posts($con);
 
-if(mysqli_num_rows($results) > 0) {
-  while($postsData = mysqli_fetch_assoc($results)){
+$query = "SELECT post_id,post_author_uid,accounts.Username,accounts.Profile_Pic,post_type,post_datetime,post_title,post_content,likers_uid
+FROM `user_posts` 
+INNER JOIN `accounts` 
+ON accounts.UID = user_posts.post_author_uid";
+
+$result = mysqli_query($con, $query);
+if(mysqli_num_rows($result) > 0) {
+  while($postsData = mysqli_fetch_assoc($result)){
     $img_path = "img/uploadedpfp/".$postsData['Profile_Pic'];
       echo <<<END
       <div class="[ panel panel-default ] panel-post">

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
     include("dbconnectionHandler.php");
     include("functions.php");
 
