@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-</head>
-
-
-
+<?php
+include("header/htmlheader.php");
+?>
 
 <body style="overflow: hidden;">
-    <header><a class="name">AsTronK</a>
+    <header><a class="name" href="index.php">AsTronK</a>
         <ul class="navigation">
             <li><a class="ahref" href="#">Main Page</a></li>
             <li><a class="ahref" href="#">About Us</a></li>
