@@ -1,0 +1,107 @@
+header * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header {
+    background: rgb(51, 58, 97);
+    padding: 10px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+}
+
+header:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+header .name {
+    position: relative;
+    font-size: 30px;
+    color: #e7e7e7;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 23.5%;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+header ul {
+    float: right;
+    list-style: none;
+    margin-right: 20.2%;
+    position: relative;
+    z-index: 1;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li .ahref {
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+header ul ul {
+    position: absolute;
+    opacity: 0;
+    top: 60px;
+    right: 0;
+    border: 3px solid rgb(56, 64, 80);
+    background: rgb(51, 58, 97);
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 2px;
+    transition: 0.5s;
+}
+
+header ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+header ul ul li {
+    position: relative;
+    width: 125px;
+    float: none;
+    display: list-item;
+}
+
+header ul ul li:hover {
+    background: rgba(101, 106, 139, 0.959);
+    color: white;
+    border-radius: 10px;
+}
+
+header ul li:hover,
+header .name:hover {
+    display: inline-block;
+    color: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    cursor: pointer;
+    -moz-text-shadow: 0 0 5px #fff;
+    -webkit-text-shadow: 0 0 5px #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    header .name {
+        padding: 0px 40px 0px 40px;
+    }
+}
