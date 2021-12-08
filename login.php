@@ -13,11 +13,14 @@ include("header/htmlheader.php");
     <div class="main-container" id="blur">
 
         <div class="login-form">
-            <h1>Login</h1>
+            <h1>Login<br></h1>
             <form>
                 <!-- <form action="php/loginHandler.php" method="POST"> -->
-                <div class="field"><input type="text" id="username" name="username" autocomplete="off" required><label>Username</label><span></span></div>
-                <div class="field"><input type="password" id="password" name="password" required><label>Password</label><span></span></div>
+                <<div class="field"><input type="text" id="username" name="username" autocomplete="off" required><label>
+                    <i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;Username</label><span></span></div>
+
+                <div class="field"><input type="password" id="password" name="password" required><label>
+                    <i class="fa fa-key fa-fw" aria-hidden="true"></i>&nbsp;Password</label><span></span></div>
                 <span id="loginstatus"></span>
                 <span id="loginmessage"></span>
                 <button type="button" id="loginbutton">Confirm</button>
@@ -49,7 +52,7 @@ include("header/htmlheader.php");
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" language="javascript" src="js/script.js"></script>
+    <script type="text/javascript" language="javascript" src="js/loginscript.js"></script>
 
 </body>
 

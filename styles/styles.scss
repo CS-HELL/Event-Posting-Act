@@ -8,14 +8,23 @@ body {
     background-color: rgba(0, 7, 26, 0.89);
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 8px;
-    background-color: rgba(107, 111, 134, 0.664);
+    background-color: rgba(0, 7, 26, 0.89);
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(182, 182, 182); 
+    border-radius: 10px;
+  }
+
+::-webkit-scrollbar-thumb {
     background-color: rgba(250, 250, 250, 0.397)
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+  }
 
 // Main Container of the body - login
 .main-container {
@@ -568,7 +577,6 @@ form .reg-field {
 
 .container .middle-content {
     border-radius: 20px;
-    
 }
 
 .container .sidebar-right {
