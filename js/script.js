@@ -70,7 +70,7 @@ $(document).ready(function () {
             <h5><span>${value.post_datetime}</span> </h5>
           </div>
         <div class="panel-body">
-          <p><b>$${value.post_title}</b></p>
+          <p><b>${value.post_title}</b></p>
           <p>${value.post_content}</p>
         </div>
         <div class="panel-footer">
