@@ -154,6 +154,11 @@ body {
   border-radius: 20px;
 }
 
+.panel-post .btn a {
+  text-decoration: none;
+  color: white;
+}
+
 .panel-post .btn-default {
   color: #ffffff;
   background-color: #313a5c;

@@ -3,7 +3,7 @@ include("php/sessionHandler.php");
 include("header/htmlheader.php");
 ?>
 
-<body>
+<body id="index.php">
 
   <header>
     <a class="name" href="index.php">AsTronK</a>
@@ -52,6 +52,7 @@ include("header/htmlheader.php");
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/navigationscript.js"></script>
 <script type="text/javascript" language="javascript" src="js/indexscript.js"></script>
 
 <footer></footer>
