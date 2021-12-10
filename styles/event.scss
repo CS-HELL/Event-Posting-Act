@@ -3,23 +3,25 @@
 
 #eventpage .container {
   margin-top: 5%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  background-color: rgba(51, 58, 97, 0.664);
   align-items: right;
 } 
 
 .row-mt-4 {
   display: flex;
+  margin: 0px 5% 5% 5%;
   overflow-x: auto;
-}
-
-.row-mt-4::-webkit-scrollbar{
-  width: 0px;
-  background-color: rgba(0, 7, 26, 0.89);
 }
 
 .row-mt-4 .col-md-4 {
   min-width: 30%;
   height: 100%;
-  
+  margin: 0px 1.5% 0px 1.5%;
+  inline-size: 150px;
+  overflow-wrap: break-word;
+  hyphens: manual;
   line-height: 110px;
 }
 
@@ -36,7 +38,6 @@
  {
   color: #ffffff;
   text-shadow: 0 0 10px #fff;
-
 }
 .events h2,
 .events h3,
