@@ -30,6 +30,10 @@
   font-weight: 300;
 }
 
+.events .card {
+  color: blue;
+}
+
 .events h1 {
   color: #ffffff;
   text-shadow: 0 0 10px #fff;
