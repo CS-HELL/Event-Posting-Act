@@ -1,4 +1,29 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+#eventpage .container {
+  margin-top: 5%;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.row-mt-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+}
+
+.row-mt-4::-webkit-scrollbar {
+  width: 0px;
+  background-color: rgba(0, 7, 26, 0.89);
+}
+
+.row-mt-4 .col-md-4 {
+  min-width: 30%;
+  height: 100%;
+  line-height: 110px;
+}
+
 .events {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;

@@ -3,7 +3,7 @@ include("php/sessionHandler.php");
 include("header/htmlheader.php");
 ?>
 
-<body id="eventpage.php">
+<body id="eventpage">
 
 
 
@@ -22,7 +22,7 @@ include("header/htmlheader.php");
     </ul>
   </header>
  
-  <div class="events py-5">
+  <div class="events py-5"">
         <div class="container">
           <!-- Row  -->
           <div class="row justify-content-center">
@@ -34,13 +34,13 @@ include("header/htmlheader.php");
             <!-- Column -->
             <!-- Column -->
           </div>
-          <div class="row mt-4">
+          <div class="row-mt-4">
             <!-- Column -->
             <div class="col-md-4 on-hover">
               <div class="">
                 <a href="#"><img class="card-img-top" src="http://219832-668593-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/09/PR2.png" alt="wrappixel kit"></a>
                 <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23</span></div>
-                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">TEST</p>
+                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Test</p>
                 <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
               </div>
             </div>
@@ -54,6 +54,22 @@ include("header/htmlheader.php");
               </div>
             </div>
             <!-- Column -->
+            <div class="col-md-4 on-hover">
+              <div class="">
+                <a href="#"><img class="card-img-top" src="http://219832-668593-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/09/PR2.png" alt="wrappixel kit"></a>
+                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23</span></div>
+                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">TEST</p>
+                <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+              </div>
+            </div>
+            <div class="col-md-4 on-hover">
+              <div class="">
+                <a href="#"><img class="card-img-top" src="http://219832-668593-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/09/PR2.png" alt="wrappixel kit"></a>
+                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23</span></div>
+                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">TEST</p>
+                <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+              </div>
+            </div>
             <div class="col-md-4 on-hover">
               <div class="">
                 <a href="#"><img class="card-img-top" src="http://219832-668593-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/09/PR2.png" alt="wrappixel kit"></a>

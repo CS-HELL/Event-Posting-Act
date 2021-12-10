@@ -1,6 +1,6 @@
 <?php
 include("header/htmlheader.php");
-
+include("php/sessionHandler.php");
 ?>
 
 <body>

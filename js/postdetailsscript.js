@@ -24,7 +24,6 @@ function getPostData(post_id) {
             url:post_id
         }, success: function (data) {
             var post = JSON.parse(data);
-            document.getElementById("mid-content").innerHTML = "content";
 
             // Key is the Number of post generated (not to be confused with the number of posts from the database)
             // Value is the values of key ex. Key 0: "post_id":"1","post_author_id":"1" <== is the value
