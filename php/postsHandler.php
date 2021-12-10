@@ -3,6 +3,7 @@
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');
 
+// Retrieve results from functions.php
 $postResults = retrieve_posts($con);
 $postArray = array();
 

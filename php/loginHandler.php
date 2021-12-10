@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+/**
+ * This handler is responsible for validating the username and password fields 
+ * and setting the session cookie with the username.
+ */
+
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');
 

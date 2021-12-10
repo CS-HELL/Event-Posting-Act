@@ -34,7 +34,7 @@ if (isset($_POST['event'])) {
                 echo json_encode($ongoingeventsArray);
                 
             } else {
-                // idk
+                // TBD
             }
 
             break;
@@ -64,7 +64,7 @@ if (isset($_POST['event'])) {
                 echo json_encode($upcomingEvents);
                 
             } else {
-                // idk
+                // TBD
             }
 
             break;
