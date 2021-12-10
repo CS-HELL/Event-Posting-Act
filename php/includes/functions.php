@@ -33,6 +33,27 @@ function retrieve_post($con, $post_id) {
     return $result;
 }
 
+function retrieve_event_posts($con) {
+    $result = $con->query("SELECT * FROM `event_posts`");
+
+    // $result = $con->query("SELECT event_post_id,event_author_uid,event_title,event_location,event_description,
+    // DATE_FORMAT(event_start_date_time, '%Y-%m-%d %H:%m:%s'),
+    // DATE_FORMAT(event_end_date_time, '%Y-%m-%d %H:%i:%s'), event_banner_image FROM `event_posts`");
+    
+    return $result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 function redirectToHomePage() {
     header('Location: ../index.php');
     exit();
