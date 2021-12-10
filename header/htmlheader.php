@@ -11,4 +11,5 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/posts.css">
+  <link rel="stylesheet" href="styles/event.css">
 </head>

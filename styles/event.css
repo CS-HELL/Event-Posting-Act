@@ -1,0 +1,76 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.events {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.events h1 {
+  color: #ffffff;
+  text-shadow: 0 0 10px #fff;
+}
+
+.events h2,
+.events h3,
+.events h4,
+.events h5,
+.events h6 {
+  color: #ffffff;
+}
+
+.events .font-weight-medium {
+  font-weight: 500;
+}
+
+.events .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.events .subtitle {
+  color: #8d97ad;
+  line-height: 24px;
+}
+
+.events .text-themecolor {
+  color: #316ce8;
+}
+
+.events h5 {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.events a.link {
+  color: #ffffff;
+}
+
+.events a.link:hover {
+  color: #316ce8;
+}
+
+.events .on-hover {
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.events .on-hover:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.events .date-pos {
+  right: 10px;
+  top: 10px;
+}
+
+.events .date-pos span {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.events .bg-info-gradiant {
+  background: #fdfdfd;
+  background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+  background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+}
+/*# sourceMappingURL=event.css.map */
