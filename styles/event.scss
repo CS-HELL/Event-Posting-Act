@@ -105,3 +105,32 @@
     background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
     background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
 }
+
+//Buttons for events
+.events>.btn {
+  float: left;
+  margin-right: 8px;
+}
+
+.events .btn {
+  border-radius: 20px;
+}
+
+.events .btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.events .btn-default {
+  color: #ffffff;
+  background-color: #313a5c;
+  border: 1px solid #313a5c;
+  box-shadow: #313a5c;
+}
+
+.events .btn-default:hover,
+.events .btn-default:focus,
+.events .btn-default:active {
+  background-color: #667bc4;
+  border: 1px solid #313a5c;
+}
