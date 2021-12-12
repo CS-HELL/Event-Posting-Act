@@ -107,4 +107,33 @@
   background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
   background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
 }
+
+.events > .btn {
+  float: left;
+  margin-right: 8px;
+}
+
+.events .btn {
+  border-radius: 20px;
+}
+
+.events .btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.events .btn-default {
+  color: #ffffff;
+  background-color: #313a5c;
+  border: 1px solid #313a5c;
+  -webkit-box-shadow: #313a5c;
+          box-shadow: #313a5c;
+}
+
+.events .btn-default:hover,
+.events .btn-default:focus,
+.events .btn-default:active {
+  background-color: #667bc4;
+  border: 1px solid #313a5c;
+}
 /*# sourceMappingURL=event.css.map */
