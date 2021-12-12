@@ -71,9 +71,26 @@ if (isset($_POST['event'])) {
 
     }
     
+} else if (isset($_POST['event_post_url_id'])) {
+    $event_post_id = $con->real_escape_string($_POST['event_post_url_id']);
+    $eventpostsResult = retrieve_event_posts($con);
+    
+    if(mysqli_num_rows($eventpostsResult) > 0) {
+        while($eventData = mysqli_fetch_assoc($eventpostsResult)) {
+            if($event_post_id == $eventData['event_post_id']) {
+                echo json_encode(mb_convert_encoding($eventData, 'UTF-8', 'UTF-8'));
+            }
+        }
+    } else {
+      
+    }
+
 } else {
 
 }
+
+
+
 
 
 

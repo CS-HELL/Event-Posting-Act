@@ -10,12 +10,9 @@ include("header/htmlheader.php");
         <ul class="navigation">
             <li><a class="ahref" href="#"><i class="fa fa-bars" style="font-size:23px;"></i></a>
                 <ul>
-                    <li><a class="ahref" href="index.php"><i class="fa fa-home fa-fw"
-                                aria-hidden="true"></i>&nbsp;<span>Home</span></a></li>
-                    <li><a class="ahref" href="#"><i class="fa fa-user-circle fa-fw"
-                                aria-hidden="true"></i>&nbsp;<span>Profile</span></a></li>
-                    <li><a class="ahref" href="php/logoutHandler.php"><i class="fa fa-sign-out-alt fa-fw"
-                                aria-hidden="true"></i>&nbsp;<span>Sign Out</span></a></li>
+                    <li><a class="ahref" href="index.php"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;<span>Home</span></a></li>
+                    <li><a class="ahref" href="#"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;<span>Profile</span></a></li>
+                    <li><a class="ahref" href="php/logoutHandler.php"><i class="fa fa-sign-out-alt fa-fw" aria-hidden="true"></i>&nbsp;<span>Sign Out</span></a></li>
                 </ul>
             </li>
         </ul>
@@ -30,17 +27,15 @@ include("header/htmlheader.php");
 
                                 <!-- <div class="registration-form" id="popup"> -->
                                 <div class="back-link">
-                                    <a href="#" id="loginFormButton"><i class="fa fa-arrow-circle-left"
-                                            style="font-size:40px"></i></a>
+                                    <a href="eventpage.php" id="loginFormButton"><i class="fa fa-arrow-circle-left" style="font-size:40px"></i></a>
                                     <!-- </div> -->
-                                    
+
                                 </div>
                             </div>
                             <div class="cover-body d-flex justify-content-between align-items-center">
                                 <div>
-                                    <img class="event-pic" src="https://www.pngrepo.com/png/190685/512/calendar.png"
-                                        alt="event">
-                                    <span class="event-name">EVENT NAME</span>
+                                    <img class="event-pic" id="event-pic" alt="event" style="border-radius: 40px;">
+                                    <span class="event-name" id="event-name"></span>
                                 </div>
 
                             </div>
@@ -58,15 +53,18 @@ include("header/htmlheader.php");
                         <div class="card-body">
                             <div class="mt-3">
                                 <h5>Event Duration:</h5>
-                                <p>test</p>
+                                <p id="eventStart">Start: </p>
+                                <p id="eventEnd">End: </p>
+                                <br>
                             </div>
                             <div class="mt-3">
-                                <h5>People Responded:</h5>
-                                <p>test</p>
+                                <h5>Participants</h5>
+                                <p id="participants">-</p>
+                                <br>
                             </div>
                             <div class="mt-3">
                                 <h5>Event by:</h5>
-                                <p>test</p>
+                                <p id="eventAuthor"></p>
                             </div>
                         </div>
                     </div>
@@ -85,8 +83,8 @@ include("header/htmlheader.php");
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <p>Ok
-                                        vrodwquibbaslddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                                    <p id="eventDetails">
+                                    
                                     </p>
                                 </div>
                             </div>
@@ -112,6 +110,10 @@ include("header/htmlheader.php");
 
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/navigationscript.js"></script>
+<script type="text/javascript" language="javascript" src="js/eventdetailsscript.js"></script>
 
 <footer></footer>
 

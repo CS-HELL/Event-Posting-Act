@@ -47,10 +47,15 @@ function retrieve_post($con, $post_id) {
  * $con is the handler for the database configuration
  */
 function retrieve_event_posts($con) {
-    $result = $con->query("SELECT * FROM `event_posts`");
+    $result = $con->query("SELECT e.event_post_id,e.event_author_uid,a.Username,e.event_title,e.event_location,e.event_description,
+    e.event_start_date_time,e.event_end_date_time,e.event_banner_image
+    FROM `event_posts` e
+    JOIN `accounts` a ON a.UID = e.event_author_uid");
     
     return $result;
 }
+
+
 
 
 

@@ -1,6 +1,10 @@
-var pathToeventBanners = "img/uploadedeventbanner/"
+var pathToeventBanners = "img/uploadedeventbanner/";
 
-$(document).ready(function () {
+const urlHostname = window.location.hostname;
+const urlProtocol = window.location.protocol;
+const path = urlProtocol+"//"+urlHostname+"/ApesStronk/eventdetails.php?event_post_id=";
+
+$("#eventpage").ready(function () {
 
     getEvents("ongoingEvents", "ongoing-events-row");
 
@@ -38,10 +42,10 @@ function getEvents(event, parentID) {
                     `
                     <div class="col-md-4 on-hover">
                     <div class="">
-                        <a href="#"><img class="card-img-top" src="${banner_path}" alt="wrappixel kit"></a>
+                        <a href="${path}${value.event_post_id}"><img class="card-img-top" src="${banner_path}" alt="wrappixel kit"></a>
                         <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">${shortMonth}<span class="d-block">${day}</span></div>
-                        <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">${value.event_title}</p>
-                        <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+                        <h5 class="font-weight-medium mt-3"><a href="${path}${value.event_post_id}" class="text-decoration-none link">${value.event_title}</p>
+                        <a href="${path}${value.event_post_id}" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
                     </div>
                     </div>
                     `;
@@ -53,3 +57,5 @@ function getEvents(event, parentID) {
         }
     });
 }
+
+

@@ -7,9 +7,6 @@ const path = urlProtocol+"//"+urlHostname+"/ApesStronk/postdetails.php?post_id="
 // Script for index.php
 $(document).ready(function () {
 
- 
-
-
   // Generate Posts from data echoed by postsHandler
   $.ajax({
     type: "GET",
