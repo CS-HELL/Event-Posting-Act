@@ -15,12 +15,10 @@ include("header/htmlheader.php");
         <div class="login-form">
             <h1>Login<br></h1>
             <form>
-                <!-- <form action="php/loginHandler.php" method="POST"> -->
-                <<div class="field"><input type="text" id="username" name="username" autocomplete="off" required><label>
-                    <i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;Username</label><span></span></div>
-
+                <div class="field"><input type="text" id="username" name="username" autocomplete="off" required><label>
+                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;Username</label><span></span></div>
                 <div class="field"><input type="password" id="password" name="password" required><label>
-                    <i class="fa fa-key fa-fw" aria-hidden="true"></i>&nbsp;Password</label><span></span></div>
+                        <i class="fa fa-key fa-fw" aria-hidden="true"></i>&nbsp;Password</label><span></span></div>
                 <span id="loginstatus"></span>
                 <span id="loginmessage"></span>
                 <button type="button" id="loginbutton">Confirm</button>

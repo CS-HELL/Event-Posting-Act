@@ -10,6 +10,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
   background-color: rgba(0, 7, 26, 0.89);
 }
 
@@ -468,8 +469,15 @@ form .reg-field {
   background: rgba(255, 255, 255, 0.212);
 }
 
+.container .sidebar-left .links-container {
+  overflow-x: auto;
+  max-height: 40%;
+}
+
 .container .sidebar-left a {
   display: block;
+  border-bottom: 1px solid #50677a;
+  min-width: 100%;
   line-height: 50px;
   -webkit-transition: 0.5s;
   transition: 0.5s;

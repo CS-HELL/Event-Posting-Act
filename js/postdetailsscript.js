@@ -2,35 +2,35 @@ var pathToPfps = "img/uploadedpfp/"
 
 // Script for index.php
 $(document).ready(function () {
-    // Generate Posts from data echoed by postsHandler
-    // Generate Posts from data echoed by postsHandler
-    const urlString = window.location.search;
-    const urlParams = new URLSearchParams(urlString);
-    const urlPost_ID = urlParams.get('post_id');
-    console.log(urlPost_ID)
-    getPostData(urlPost_ID);
-    
-            // $.each(post, function (key, value) {
-            //   // Compress the data from the database with the path to the image
+  // Generate Posts from data echoed by postsHandler
+  const urlString = window.location.search;
+  const urlParams = new URLSearchParams(urlString);
+  const urlPost_ID = urlParams.get('post_id');
+  console.log(urlPost_ID)
+  getPostData(urlPost_ID);
+
 });
 
-
+/**
+ * This function is responsible for communicating with the php server 
+ * and to dynamically insert elements to the page.
+ * 
+ * The post_id is the id of the post that is retrieved from the url.
+ * @param {*} post_id 
+ */
 function getPostData(post_id) {
-    $.ajax({
-        url: "php/postHandler.php",
-        method: "POST",
-        dataType: "text",
-        data: {
-            url:post_id
-        }, success: function (data) {
-            var post = JSON.parse(data);
+  $.ajax({
+    url: "php/postHandler.php",
+    method: "POST",
+    dataType: "text",
+    data: {
+      url: post_id
+    }, success: function (data) {
+      var post = JSON.parse(data);
 
-            // Key is the Number of post generated (not to be confused with the number of posts from the database)
-            // Value is the values of key ex. Key 0: "post_id":"1","post_author_id":"1" <== is the value
-
-            var img_path = pathToPfps + post.Profile_Pic;
-            const content =
-                `
+      var img_path = pathToPfps + post.Profile_Pic;
+      const content =
+        `
           <div class="[ panel panel-default ] panel-post">
             <div class="panel-heading">
               <img class="[ img-circle pull-left ]" src="${img_path}" alt="" />
@@ -47,9 +47,7 @@ function getPostData(post_id) {
           </div>
           </div>
           `;
-            // Generate a single post each iteration
-            //document.getElementById("mid-content").innerHTML = content;
-            $("#mid-content").append(content);
-        }
-    });
+      $("#mid-content").append(content);
+    }
+  });
 }

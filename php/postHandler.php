@@ -6,7 +6,6 @@ include('includes/functions.php');
 if (!isset($_POST['url'])) {}
 
 $post_id = $con->real_escape_string($_POST['url']);
-
 $postResult = retrieve_post($con, $post_id);
 
 if(mysqli_num_rows($postResult) > 0) {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 06, 2021 at 04:02 PM
+-- Generation Time: Dec 10, 2021 at 02:06 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
   `UID` int(100) NOT NULL AUTO_INCREMENT,
-  `Account_Type` enum('Administrator','Organizer','Member') NOT NULL,
+  `Account_Type` varchar(15) NOT NULL,
   `Username` varchar(8) NOT NULL,
   `Password` varchar(100) NOT NULL,
   `Profile_Pic` text NOT NULL,
@@ -40,17 +40,44 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `About` varchar(100) NOT NULL,
   PRIMARY KEY (`UID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accounts`
 --
 
 INSERT INTO `accounts` (`UID`, `Account_Type`, `Username`, `Password`, `Profile_Pic`, `First_Name`, `Last_Name`, `Account_Creation_Date`, `About`) VALUES
-(1, 'Administrator', 'root', '63a9f0ea7bb98050796b649e85481845', 'root_1.jpg', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers'),
-(2, 'Administrator', 'Saiph', '63a9f0ea7bb98050796b649e85481845', 'saiph_1.jpg', 'Bryan', 'Capistrano', '12/3/2021', 'CSboi'),
-(3, 'Administrator', 'Teng', '63a9f0ea7bb98050796b649e85481845', 'teng_1.png', 'Austin', 'Andres', '12/03/2021', 'CSnoob'),
-(4, 'Member', 'Memeber', '63a9f0ea7bb98050796b649e85481845', 'exttra_1.png', 'Ara ara', 'Kawaii neko', '11/12/2021', 'Ara ara');
+(1, 'ADMIN', 'root', '63a9f0ea7bb98050796b649e85481845', 'root_1.jpg', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers'),
+(2, 'ADMIN', 'Saiph', '63a9f0ea7bb98050796b649e85481845', 'saiph_1.jpg', 'Bryan', 'Capistrano', '12/3/2021', 'CSboi'),
+(3, 'ADMIN', 'Teng', '63a9f0ea7bb98050796b649e85481845', 'teng_1.png', 'Austin', 'Andres', '12/03/2021', 'CSnoob'),
+(4, 'MEMBER', 'Memeber', '63a9f0ea7bb98050796b649e85481845', 'exttra_1.png', 'Ara ara', 'Kawaii neko', '11/12/2021', 'Ara ara');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_posts`
+--
+
+DROP TABLE IF EXISTS `event_posts`;
+CREATE TABLE IF NOT EXISTS `event_posts` (
+  `event_post_id` int(20) NOT NULL,
+  `event_author_uid` int(20) NOT NULL,
+  `event_title` varchar(30) NOT NULL,
+  `event_location` varchar(100) NOT NULL,
+  `event_description` varchar(2000) NOT NULL,
+  `event_start_date_time` datetime NOT NULL,
+  `event_end_date_time` datetime NOT NULL,
+  `event_banner_image` varchar(500) NOT NULL,
+  PRIMARY KEY (`event_post_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `event_posts`
+--
+
+INSERT INTO `event_posts` (`event_post_id`, `event_author_uid`, `event_title`, `event_location`, `event_description`, `event_start_date_time`, `event_end_date_time`, `event_banner_image`) VALUES
+(1, 1, 'Africa Games Week 2021', 'Baguio City', 'Off the back of the last 4 year’s events Africa Games Week continues to drive exposure, opportunities, knowledge and investment to African Game Developers connecting them to the world. AGW', '2021-12-10 00:00:00', '2021-12-15 03:00:00', 'defaultpfp.png'),
+(2, 2, 'PAX Unplugged 2021', 'Castillejos, Zambales', 'PAX Unplugged 2021 will be an exciting analog-focused extension of our already existing portfolio of PAX events. We’ve found that the Tabletop parts of PAX have grown and grown to', '2021-12-15 17:52:59', '2021-12-23 17:52:59', 'exttra_1.png');
 
 -- --------------------------------------------------------
 
