@@ -20,11 +20,11 @@ $(document).ready(function () {
  */
 function getPostData(post_id) {
   $.ajax({
-    url: "php/postHandler.php",
-    method: "POST",
+    url: "php/postsHandler.php",
+    method: "GET",
     dataType: "text",
     data: {
-      url: post_id
+      RetrieveSinglePost: post_id
     }, success: function (data) {
       var post = JSON.parse(data);
 

@@ -6,9 +6,9 @@ const path = urlProtocol+"//"+urlHostname+"/ApesStronk/eventdetails.php?event_po
 
 $("#eventpage").ready(function () {
 
-    getEvents("ongoingEvents", "ongoing-events-row");
+    getEvents("ongoingEventsDetails", "ongoing-events-row");
 
-    getEvents("upcomingEvents", "upcoming-events-row");
+    getEvents("upcomingEventsDetails", "upcoming-events-row");
 })
 
 
@@ -17,13 +17,13 @@ $("#eventpage").ready(function () {
  * @param {*} event
  * @param {*} parentID 
  */
-function getEvents(event, parentID) {
+function getEvents(eventStatus, parentID) {
     $.ajax({
         url: "php/eventsHandler.php",
-        method: "POST",
+        method: "GET",
         dataType: "text",
         data: {
-            event: event
+            retrieveEventPosts: eventStatus
         }, success: function (data) {
             console.log(data);
             var event = JSON.parse(data);

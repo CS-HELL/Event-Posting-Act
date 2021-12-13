@@ -6,9 +6,8 @@ $(document).ready(function () {
   // Generate Posts from data echoed by postsHandler
   const urlString = window.location.search;
   const urlParams = new URLSearchParams(urlString);
-  const urleventPost_ID = urlParams.get('event_post_id');
-  console.log(urleventPost_ID)
-  getPostData(urleventPost_ID);
+  const eventPost_ID = urlParams.get('event_post_id');
+  getPostData(eventPost_ID);
 
 });
 
@@ -19,13 +18,13 @@ $(document).ready(function () {
  * The post_id is the id of the post that is retrieved from the url.
  * @param {*} post_id 
  */
-function getPostData(event_post_id) {
+function getPostData(eventPost_ID) {
   $.ajax({
     url: "php/eventsHandler.php",
     method: "POST",
     dataType: "text",
     data: {
-        event_post_url_id: event_post_id
+      eventPost_ID: eventPost_ID
     }, success: function (data) {
       var eventPost = JSON.parse(data);
 

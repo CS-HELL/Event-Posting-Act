@@ -3,17 +3,18 @@
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');
 
-if (isset($_POST['event'])) {
+if (isset($_GET['retrieveEventPosts'])) {
 
     $eventsResult = retrieve_event_posts($con);
+    $date_default_timezone_set = ('Philippines');
+    $date_today = date('Y-m-d H:m:s');
 
-    switch ($_POST['event']) {
+    switch ($_GET['retrieveEventPosts']) {
         
-        case 'ongoingEvents':
+        case 'ongoingEventsDetails':
 
             $ongoingeventsArray = array();
-            $date_default_timezone_set = ('Philippines');
-            $date_today = date('Y-m-d H:m:s');
+            
             
             if(mysqli_num_rows($eventsResult) > 0) {
                 
@@ -39,11 +40,9 @@ if (isset($_POST['event'])) {
 
             break;
 
-        case 'upcomingEvents':
+        case 'upcomingEventsDetails':
 
             $upcomingEvents = array();
-            $date_default_timezone_set = ('Philippines');
-            $date_today = date('Y-m-d H:m:s');
             
             if(mysqli_num_rows($eventsResult) > 0) {
                 
@@ -69,10 +68,10 @@ if (isset($_POST['event'])) {
 
             break;
 
-    }
+        }
     
-} else if (isset($_POST['event_post_url_id'])) {
-    $event_post_id = $con->real_escape_string($_POST['event_post_url_id']);
+} else if (isset($_POST['eventPost_ID'])) {
+    $event_post_id = $con->real_escape_string($_POST['eventPost_ID']);
     $eventpostsResult = retrieve_event_posts($con);
     
     if(mysqli_num_rows($eventpostsResult) > 0) {
@@ -81,6 +80,7 @@ if (isset($_POST['event'])) {
                 echo json_encode(mb_convert_encoding($eventData, 'UTF-8', 'UTF-8'));
             }
         }
+
     } else {
       
     }

@@ -33,15 +33,6 @@ function retrieve_posts($con){
     return $result;
 }
 
-function retrieve_post($con, $post_id) {
-    $result = $con->query("SELECT post_id,post_author_uid,accounts.Username,accounts.Profile_Pic,post_type,post_datetime,post_title,post_content,likers_uid
-    FROM `user_posts` 
-    INNER JOIN `accounts` 
-    ON accounts.UID = user_posts.post_author_uid WHERE post_id = '$post_id'");
-
-    return $result;
-}
-
 /**
  * This function is used to retrieve the event posts from the database
  * $con is the handler for the database configuration
