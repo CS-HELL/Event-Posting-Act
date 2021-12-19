@@ -22,52 +22,52 @@ include("header/htmlheader.php");
     </header>
 
 
-        <div class="container">  
-        <div class="col-sm-11 my-auto">     
-                <div class="form-group">
-                    <span class="col-md-1 col-md-offset-2 text-center"></span>
-                    <div class="col-md-8">
-                        <h2>Create Event Post</h2>  
-                        <input id="fname" name="name" type="text" placeholder="Title" class="form-control">
-                    </div>
+    <div class="container">
+        <div class="col-sm-11 my-auto">
+            <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"></span>
+                <div class="col-md-8">
+                    <h2>Create Event Post</h2>
+                    <input id="fname" name="name" type="text" placeholder="Title" class="form-control">
                 </div>
+            </div>
 
 
-                <div class="form-group">
-                    <span class="col-md-1 col-md-offset-2 text-center"></span>
-                    <div class="col-md-8">
-                        <label class="label">Event Start:</label>
-                        <input type="datetime-local" id="birthdaytime" name="birthdaytime" class="form-control">
-                    </div>
+            <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"></span>
+                <div class="col-md-8">
+                    <label class="label">Event Start:</label>
+                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" class="form-control">
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <span class="col-md-1 col-md-offset-2 text-center"></span>
-                    <div class="col-md-8">
-                        <label class="label">Event Ends:</label>
-                        <input type="datetime-local" id="birthdaytime" name="birthdaytime" class="form-control">
-                    </div>
+            <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"></span>
+                <div class="col-md-8">
+                    <label class="label">Event Ends:</label>
+                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" class="form-control">
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <span class="col-md-1 col-md-offset-2 text-center"></span>
-                    <div class="col-md-8">
-                        <label class="label">Event Details:</label>
-                        <textarea class="form-control" id="message" name="message" placeholder="Insert Event Details"
-                            rows="7"></textarea>
-                    </div>
+            <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"></span>
+                <div class="col-md-8">
+                    <label class="label">Event Details:</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Insert Event Details"
+                        rows="7"></textarea>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <div class="col-md-2 col-md-offset-6 text-center">
-                        <p></p>
-                        <button class="posteventbtn">Create</button>
-                    </div>
+            <div class="form-group">
+                <div class="col-md-2 col-md-offset-9 text-center">
+                    <p></p>
+                    <button class="posteventbtn">Create</button>
                 </div>
-
-</div>
+            </div>
 
         </div>
+
+    </div>
 
 
 </body>
@@ -79,4 +79,3 @@ include("header/htmlheader.php");
 <footer></footer>
 
 </html>
-
