@@ -7,7 +7,12 @@ const path = urlProtocol+"//"+urlHostname+"/ApesStronk/postdetails.php?post_id="
 // Script for index.php
 $(document).ready(function () {
 
-  RetrieveAndGeneratePosts("RetrieveAllPosts", "mid-content");
+  RetrieveAndGeneratePosts("RetrieveAllPosts", "mid-content"); 
+
+  // setInterval(function(){ 
+  //   clearDiv("mid-content");
+  //   RetrieveAndGeneratePosts("RetrieveAllPosts", "mid-content"); 
+  // }, 3000);
 
 });
 
@@ -55,4 +60,11 @@ function RetrieveAndGeneratePosts(RetrievePosts, parentID) {
       });
     }
   });
+}
+
+function clearDiv(elementID) {
+  var div = document.getElementById(elementID);
+  while(div.firstChild) {
+      div.removeChild(div.firstChild);
+  }
 }
