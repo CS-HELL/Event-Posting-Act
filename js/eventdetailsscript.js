@@ -29,7 +29,7 @@ function getPostData(eventPost_ID) {
       var eventPost = JSON.parse(data);
 
       $("#eventStart").append(eventPost.event_start_date_time);
-      $("#eventEnd").append(eventPost.event_start_date_time);
+      $("#eventEnd").append(eventPost.event_end_date_time);
 
       $("#event-pic").attr("src", pathToeventBanners+eventPost.event_banner_image);
 

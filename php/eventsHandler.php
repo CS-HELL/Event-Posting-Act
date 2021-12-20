@@ -15,7 +15,7 @@ if (isset($_GET['retrieveEventPosts'])) {
 
             $ongoingeventsArray = array();
             
-            
+
             if(mysqli_num_rows($eventsResult) > 0) {
                 
 
@@ -45,8 +45,8 @@ if (isset($_GET['retrieveEventPosts'])) {
             $upcomingEvents = array();
             
             if(mysqli_num_rows($eventsResult) > 0) {
-                
 
+                
                 while($ongoing_eventData = mysqli_fetch_assoc($eventsResult)) {
                     $event_start_date_time = new DateTime($ongoing_eventData['event_start_date_time']);
                     $event_end_date_time = new DateTime($ongoing_eventData['event_end_date_time']);
