@@ -839,4 +839,24 @@ img {
   border: 1px solid #313a5c;
   cursor: pointer;
 }
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modal {
+  background-color: #667bc4;
+}
 /*# sourceMappingURL=styles.css.map */

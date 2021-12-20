@@ -51,9 +51,9 @@ function insert_event($con, $author, $event_title, $event_location, $event_descr
     
     $execute=mysqli_query($con, $query);
     if($execute === true) {
-        return "Success";
+        return "success";
     } else {
-        return "Error";
+        return "error";
     }
 }
 
@@ -74,6 +74,7 @@ function redirectToHomePage() {
     header('Location: index.php');
     exit();
 }
+
 
 function redirectToErrorPage() {
 

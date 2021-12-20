@@ -40,8 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
                     $result = insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $new_img_name);
     
-                    if ($result === "Success") {
+                    if ($result === "success") {
                         echo $result;
+                        //header('Location: ../eventpage.php');
                     } else {
                         echo $result;
                     }
@@ -56,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 
-    
 } else {
     echo "error";
 }

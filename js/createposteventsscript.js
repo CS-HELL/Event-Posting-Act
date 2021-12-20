@@ -5,6 +5,22 @@ flatpickr("input[type=datetime-local]", {
 
 $(document).ready(function () {
 
+    $("#validate").click(function () {
+        var eventtitle = $("#eventtitle").val();
+        var eventlocation = $("#eventlocation").val();
+        var eventstart = $("#eventstartdatetime").val();
+        var eventend = $("#eventenddatetime").val();
+        var eventdetails = $("#eventdetails").val();
+        var eventimage = $("#image")[0].files[0];
+
+        document.getElementById("titlever").innerHTML = eventtitle;
+        document.getElementById("locationver").innerHTML = eventlocation;
+        document.getElementById("startver").innerHTML = eventstart;
+        document.getElementById("endver").innerHTML = eventend;
+        document.getElementById("detver").innerHTML = eventdetails;
+        document.getElementById("imagever").innerHTML = eventimage.name;
+    })
+
     $("#submitbutton").click(function (e) {
         e.preventDefault();
 
@@ -27,14 +43,14 @@ $(document).ready(function () {
             method: "POST",
             url: "php/insertpostHandler.php",
             data: form_data,
-            dataType: "json",
+            dataType: "text",
             contentType: false,
             cache: false,
             processData: false,
             success: function (response) {
                 switch (response) {
-                    case "Success": // If loginHandler echoes success do this:
-                        $("#statusmessage").text("Inserted Successfully");
+                    case "success": // If loginHandler echoes success do this:
+                        window.location.href = "eventpage.php";
                         break;
                     case "Error": // If loginHandler echoes denied do this:
                         $("#statusmessage").text("Error");
@@ -43,9 +59,9 @@ $(document).ready(function () {
                         $("#loginmessage").text("Fields can't be blank!");
                         break;
                 }
-            }})
+            }
+        })
     })
-
 
 
 })
