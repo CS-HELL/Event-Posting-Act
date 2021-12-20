@@ -755,8 +755,9 @@ form .reg-field {
     }
     
     .event-details .event-header .cover .cover-body .event-pic {
-    
-    width: 100px;
+    width: 120px;
+    margin-bottom: 15px;
+    border: 2px solid white;
     }
     
     @media (max-width: 767px) {

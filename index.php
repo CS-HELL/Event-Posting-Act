@@ -37,18 +37,6 @@ include("header/htmlheader.php");
     </div>
   </div>
 
-  <!-- <div class="container">
-    <div class="sidebar-left" id="sidebar-left">
-     
-    </div>
-
-    <div class="middle-content" id="mid-content">
-      
-    </div>
-
-    <div class="sidebar-right"></div>
-  </div> -->
-
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

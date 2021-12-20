@@ -57,6 +57,73 @@ function insert_event($con, $author, $event_title, $event_location, $event_descr
     }
 }
 
+function retrieve_participants($con) {
+    $result = $con->query("SELECT * FROM `event_participants`");
+    return $result;
+}
+
+function remove_currentuser_participant($con, $username, $event_post_id) {
+    $query = "DELETE FROM `event_participants` WHERE participant = '$username' AND event_target_id = '$event_post_id'";
+
+    $execute=mysqli_query($con, $query);
+    if($execute === true) {
+        return "success";
+    } else {
+        return "error";
+    }
+}
+
+function find_if_currentuser_is_participant($con, $username, $event_post_id) {
+    $query = "SELECT * FROM `event_participants` WHERE participant = '$username' AND event_target_id = $event_post_id";
+
+    $result=mysqli_query($con, $query);
+
+    if (mysqli_num_rows($result) == 0) {
+        echo "no";
+    } else {
+        echo "yes";
+    }
+    
+}
+
+
+function add_currentuser_participant($con, $username, $event_post_id, $join_date) {
+    $query = "INSERT INTO event_participants(participant, event_target_id, event_join_date) 
+    VALUES ('$username', '$event_post_id', '$join_date')";
+
+    $execute=mysqli_query($con, $query);
+    if($execute === true) {
+        return "success";
+    } else {
+        return "error";
+    }
+}
+
+// function add_currentuser_participant($con, $username, $event_post_id, $join_date) {
+
+//     $result = retrieve_participants($con);
+
+//     if(mysqli_num_rows($result) > 0) {
+//         while($eventParticipant = mysqli_fetch_assoc($result)) {
+//             if($event_post_id === $eventParticipant['event_target_id'] && $username === $eventParticipant['participant']) {
+//                 echo "duplicate";
+//             }
+//         }
+//     } else {
+//         $query = "INSERT INTO event_participants(participant, event_target_id, event_join_date) 
+//         VALUES ('$username', '$event_post_id', '$join_date')";
+    
+//         $execute=mysqli_query($con, $query);
+//         if($execute == true) {
+//             return "success";
+//         } else {
+//             return "error";
+//         }
+//     }
+
+    
+// }
+
 
 
 

@@ -1,3 +1,5 @@
+// Format for date picker.
+// Flatpickr is used.
 flatpickr("input[type=datetime-local]", {
     enableTime: true,
     dateFormat: "Y-m-d H:i:ss",
@@ -5,6 +7,7 @@ flatpickr("input[type=datetime-local]", {
 
 $(document).ready(function () {
 
+    // Click function, for validation, appends the current data to the validation acceptance modal.
     $("#validate").click(function () {
         var eventtitle = $("#eventtitle").val();
         var eventlocation = $("#eventlocation").val();
@@ -21,6 +24,7 @@ $(document).ready(function () {
         document.getElementById("imagever").innerHTML = eventimage.name;
     })
 
+    // Submit Event
     $("#submitbutton").click(function (e) {
         e.preventDefault();
 
@@ -49,13 +53,13 @@ $(document).ready(function () {
             processData: false,
             success: function (response) {
                 switch (response) {
-                    case "success": // If loginHandler echoes success do this:
+                    case "success": // If insertpostHandler echoes success do this:
                         window.location.href = "eventpage.php";
                         break;
-                    case "Error": // If loginHandler echoes denied do this:
+                    case "Error": // If insertpostHandler echoes denied do this:
                         $("#statusmessage").text("Error");
                         break;
-                    case "Blank Credentials": // If loginHandler echoes blank credentials do this:
+                    case "Blank Credentials": // If insertpostHandler echoes blank credentials do this:
                         $("#loginmessage").text("Fields can't be blank!");
                         break;
                 }

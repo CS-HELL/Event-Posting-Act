@@ -58,11 +58,6 @@ include("header/htmlheader.php");
                                 <br>
                             </div>
                             <div class="mt-3">
-                                <h5>Participants</h5>
-                                <p id="participants">-</p>
-                                <br>
-                            </div>
-                            <div class="mt-3">
                                 <h5>Event by:</h5>
                                 <p id="eventAuthor"></p>
                             </div>
@@ -96,10 +91,12 @@ include("header/htmlheader.php");
                 <div class="d-none d-xl-block col-xl-3 right-wrapper">
                     <div class="row">
                         <div class="col-md-12 grid-margin">
-                            <div class="card rounded">
-                                <div class="card-body">
-                                    <h6 class="card-title">TEST</h6>
-                                </div>
+                            <div class="card rounded" id="cardrounded">
+                                
+                                <br>
+                                <button id="participants" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#participantsModal">Participants</button>"
+                                <!-- <button id="validateunjoin" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#validateUnjoinModal">Unjoin</button>
+                                <button id="validatejoin" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#validateJoinModal">Join</button>" -->
                             </div>
                         </div>
                     </div>
@@ -108,8 +105,69 @@ include("header/htmlheader.php");
             </div>
         </div>
 
+        
+                            <div class="modal fade" id="validateJoinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background-color: #313a5c; padding-top: 10%;">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                            <h3 style="color: black;">Are you sure you want to join this event?</h3>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" id="verifyjoin" class="btn btn-primary">Verify</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="validateUnjoinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background-color: #313a5c; padding-top: 10%;">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                            <h3 style="color: black;">Are you sure you want to leave this event?</h3>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" id="verifyunjoin" class="btn btn-primary">Verify</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="participantsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background-color: #313a5c; padding-top: 10%;">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" id="modal-body" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                            <h3 style="color: black;">Participants:</h3>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" language="javascript" src="js/navigationscript.js"></script>

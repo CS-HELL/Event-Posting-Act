@@ -56,7 +56,7 @@ include("header/htmlheader.php");
 
                             <label class="label">Image</label>
 
-                            <input style="color: white;" type="file" name="image" id="image">
+                            <input style="color: white; "type="file" name="image" id="image">
 
 
                             <br>

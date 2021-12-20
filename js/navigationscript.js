@@ -23,7 +23,7 @@ $(document).ready(function () {
           <div class="links-container">
           <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;<span>Home</span></a>
           <a href="createpostevents.php"><i class="fa fa-fire fa-fw" aria-hidden="true"></i>&nbsp;<span>Post New Event</span></a>
-          <a href="#"><i class="fa fa-pen-alt fa-fw" aria-hidden="true"></i>&nbsp;<span>Post Now</span></a>
+          <a href="createcommunitypost.php"><i class="fa fa-pen-alt fa-fw" aria-hidden="true"></i>&nbsp;<span>Post Now</span></a>
           <a href="#"><i class="fa fa-pied-piper-square fa-fw" aria-hidden="true"></i>&nbsp;<span>My Posts</span></a>
           <a href="eventpage.php"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;<span>Events</span></a>
           <a href="#"><i class="fa fa-dungeon fa-fw" aria-hidden="true"></i>&nbsp;<span>Events I am in</span></a>
@@ -41,7 +41,7 @@ $(document).ready(function () {
           <br>
           <div class="links-container">
           <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;<span>Home</span></a>
-          <a href="#"><i class="fa fa-pen-alt fa-fw" aria-hidden="true"></i>&nbsp;<span>Post Now</span></a>
+          <a href="createcommunitypost.php"><i class="fa fa-pen-alt fa-fw" aria-hidden="true"></i>&nbsp;<span>Post Now</span></a>
           <a href="#"><i class="fa fa-pied-piper-square fa-fw" aria-hidden="true"></i>&nbsp;<span>My Posts</span></a>
           <a href="eventpage.php"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;<span>Events</span></a>
           <a href="#"><i class="fa fa-dungeon fa-fw" aria-hidden="true"></i>&nbsp;<span>Events I am in</span></a>

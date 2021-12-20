@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 20, 2021 at 01:53 PM
+-- Generation Time: Dec 20, 2021 at 08:40 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -79,11 +79,20 @@ CREATE TABLE IF NOT EXISTS `comments` (
 DROP TABLE IF EXISTS `event_participants`;
 CREATE TABLE IF NOT EXISTS `event_participants` (
   `event_join_id` int(22) NOT NULL AUTO_INCREMENT,
-  `participant_uid` int(22) NOT NULL,
+  `participant` varchar(22) NOT NULL,
   `event_target_id` int(22) NOT NULL,
-  `event_join_date` int(22) NOT NULL,
+  `event_join_date` datetime NOT NULL,
   PRIMARY KEY (`event_join_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `event_participants`
+--
+
+INSERT INTO `event_participants` (`event_join_id`, `participant`, `event_target_id`, `event_join_date`) VALUES
+(2, 'Saiph', 2, '2021-12-20 00:50:58'),
+(3, 'kaiser', 2, '2021-12-20 00:50:58'),
+(40, 'root', 2, '2021-12-20 20:39:46');
 
 -- --------------------------------------------------------
 
