@@ -35,13 +35,13 @@ include("header/htmlheader.php");
 
                             <div class="col-md-8">
 
-                                <form id="event_post" method="post">
+                                
                                     <h2>Create Event Post</h2>
-                                    <input id="title" name="eventtitle" type="text" placeholder="Title (Required)" autocomplete="off" class="form-control">
+                                    <input id="eventtitle" name="eventtitle" type="text" placeholder="Title (Required)" autocomplete="off" class="form-control">
 
                                     <label class="label">Location</label>
-                                    <input list="browsers" name="eventlocation" class="form-control">
-                                    <datalist id="browsers">
+                                    <input list="eventlocation" id="eventlocation" name="eventlocation" class="form-control">
+                                    <datalist id="eventlocation2">
                                         <option value="Virtual">
                                     </datalist>
 
@@ -55,13 +55,14 @@ include("header/htmlheader.php");
                                     <textarea class="form-control" name="eventdetails" id="eventdetails" placeholder="Insert Event Details" rows="7"></textarea>
 
                                     <label class="label">Image</label>
-                                    <input type="file" name="image" id="image" />
+
+                                    <input type="file" name="image" id="image">
 
 
                                     <label class="label" id="statusmessage"></label>
-                                    <input type="submit" id="submitbutton" class="posteventbtn"></input>
+                                    <button type="button" id="submitbutton" class="posteventbtn">Button</button>
 
-                                </form>
+                               
                             </div>
                         </div>
                     </div>

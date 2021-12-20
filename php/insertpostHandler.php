@@ -1,44 +1,64 @@
-<?php 
+<?php
 session_start();
 
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');
 
-$author = $_SESSION['Username'];
-$event_title = $_POST['eventtitle'];
-$event_location = $_POST['eventlocation'];
-$event_description = $_POST['eventdetails'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-$event_start_date_time = new DateTime($_POST['eventstartdatetime']);
-$event_end_date_time = new DateTime($_POST['eventstartdatetime']);
+    $author = $_SESSION['Username'];
+    $event_title = $_POST['eventtitle'];
+    $event_location = $_POST['eventlocation'];
+    $event_description = $_POST['eventdetails'];
 
-$event_start = $event_start_date_time->format('Y-m-d H:i:ss');
-$event_end = $event_start_date_time->format('Y-m-d H:i:ss');
+    $event_start_date_time = new DateTime($_POST['eventstart']);
+    $event_end_date_time = new DateTime($_POST['eventend']);
 
-$output_dir = "img/uploadedeventbanner";
+    $event_start = $event_start_date_time->format('Y-m-d H:i:ss');
+    $event_end = $event_start_date_time->format('Y-m-d H:i:ss');
 
-if(isset($_FILES['image'])){
-    $RandomNum = time();
-	$ImageName = str_replace(' ','-',strtolower($_FILES['image']['name'][0]));
-	$ImageType = $_FILES['image']['type'][0];
- 
-	$ImageExt = substr($ImageName, strrpos($ImageName, '.'));
-	$ImageExt = str_replace('.','',$ImageExt);
-	$ImageName = preg_replace("/\.[^.\s]{3,4}$/", "", $ImageName);
-	$NewImageName = $ImageName.'-'.$RandomNum.'.'.$ImageExt;
-    $ret[$NewImageName]= $output_dir.$NewImageName;
-	            
-	move_uploaded_file($_FILES["image"]["tmp_name"][0],$output_dir."/".$NewImageName );
-    $result = insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $img);
+    $img_name = $_FILES['image']['name'];
+    $img_size = $_FILES['image']['size'];
+    $tmp_name = $_FILES['image']['tmp_name'];
+    $error = $_FILES['image']['error'];
 
-    if($result === "Success"){
-        echo $result;
-    } else {
-        echo $result;
+    if(isset($_FILES['image'])) {
+        if ($error === 0) {
+            if ($img_size > 12500000) {
+                $em = "largefile";
+                echo $em;
+            } else {
+                $img_ext = pathinfo($img_name, PATHINFO_EXTENSION);
+                $img_ext_lc = strtolower($img_ext);
+    
+                $allowed_exts = array('jpg', 'png', 'jpeg');
+    
+                if (in_array($img_ext_lc, $allowed_exts)) {
+                    $new_img_name = uniqid("IMG-", true) . '.' . $img_ext_lc;
+                    $img_upload_path = "../img/uploadedeventbanner/" . $new_img_name;
+                    move_uploaded_file($tmp_name, $img_upload_path);
+    
+                    $result = insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $new_img_name);
+    
+                    if ($result === "Success") {
+                        echo $result;
+                    } else {
+                        echo $result;
+                    }
+                } else {
+                    $em = "invalidext";
+                    echo $em;
+                }
+            }
+        } else {
+            $em = "unknownerror";
+            echo $em;
+        }
     }
+
+    
+} else {
+    echo "error";
 }
-
-	
-
 
 ?>
