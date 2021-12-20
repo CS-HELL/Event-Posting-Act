@@ -1,6 +1,12 @@
 var pathToPfps = "img/uploadedpfp/";
 var pathToeventBanners = "img/uploadedeventbanner/";
+
+const urlHostname = window.location.hostname;
+const urlProtocol = window.location.protocol;
+const path = urlProtocol+"//"+urlHostname+"/ApesStronk/updatepostevents.php?event_post_id=";
+
 var username = "";
+var post_id = "";
 var participants = [];
 
 // Script for index.php
@@ -13,10 +19,9 @@ $(document).ready(function () {
   getUserData();
   getPostData(eventPost_ID);
 
-  // setInterval(function () {
-     getParticipants(eventPost_ID);
-     currentUserIsParticipant(eventPost_ID);
-  // }, 1000);
+  getParticipants(eventPost_ID);
+  currentUserIsParticipant(eventPost_ID);
+
 
   $("#verifyjoin").click(function () {
     $.ajax({
@@ -64,6 +69,7 @@ function getPostData(eventPost_ID) {
       getEventPost: eventPost_ID
     }, success: function (data) {
       var eventPost = JSON.parse(data);
+      post_id = eventPost.event_post_id;
 
       $("#eventStart").append(eventPost.event_start_date_time);
       $("#eventEnd").append(eventPost.event_end_date_time);
@@ -73,7 +79,6 @@ function getPostData(eventPost_ID) {
       $("#eventAuthor").append(eventPost.event_author);
       $("#eventDetails").append(eventPost.event_description);
 
-      //$("#cardrounded").append('');
     }
   });
 }
@@ -87,7 +92,6 @@ function getParticipants(eventPost_ID) {
       getParticipants: eventPost_ID
     }, success: function (data) {
       var eventPost = JSON.parse(data);
-      let isParticipant = false;
 
       $.each(eventPost, function (key, value) {
 
@@ -101,20 +105,6 @@ function getParticipants(eventPost_ID) {
         // Generate a single participant each iteration
         $("#modal-body").append(content)
       })
-
-      
-
-
-
-      // var valjoin = document.getElementById("validatejoin");
-      // var valunjoin = document.getElementById("validateunjoin");
-
-      // console.log(participants.includes(username))
-
-      // if (participants.includes(username)) {
-      //   valjoin.disabled = true;
-      //   valunjoin.disabled = false;
-      // } 
       
     }
   });
@@ -129,6 +119,15 @@ function getUserData() {
     success: function (data) {
       var currentUser = JSON.parse(data);
       username = currentUser.Username;
+
+      if (currentUser.Account_Type == "ADMIN" || currentUser.Account_Type == "ORGANIZER") {
+        const content = 
+        `
+        <button id="editeventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]"><a href=${path}${post_id}>Edit Event</a></button>
+        `;
+        $("#cardrounded").append(content);
+        $("#cardrounded").append('<button id="canceleventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]">Cancel Event</button>"');
+      }
     }
   });
 }

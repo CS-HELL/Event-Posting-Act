@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $event_end_date_time = new DateTime($_POST['eventend']);
 
     $event_start = $event_start_date_time->format('Y-m-d H:i:ss');
-    $event_end = $event_start_date_time->format('Y-m-d H:i:ss');
+    $event_end = $event_end_date_time->format('Y-m-d H:i:ss');
 
     $img_name = $_FILES['image']['name'];
     $img_size = $_FILES['image']['size'];

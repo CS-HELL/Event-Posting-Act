@@ -60,7 +60,7 @@ include("header/htmlheader.php");
 
 
                             <br>
-                            <button type="button" id="validate" class="posteventbtn" data-toggle="modal" data-target="#exampleModalCenter">Button</button>
+                            <button type="button" id="validate" class="posteventbtn" data-toggle="modal" data-target="#exampleModalCenter">Host Event</button>
 
                             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background-color: #313a5c; padding-top: 10%;">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
