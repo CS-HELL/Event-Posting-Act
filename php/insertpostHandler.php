@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $event_title = $_POST['eventtitle'];
     $event_location = $_POST['eventlocation'];
     $event_description = $_POST['eventdetails'];
+    $event_status_default = "live";
 
     $event_start_date_time = new DateTime($_POST['eventstart']);
     $event_end_date_time = new DateTime($_POST['eventend']);
@@ -38,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     $img_upload_path = "../img/uploadedeventbanner/" . $new_img_name;
                     move_uploaded_file($tmp_name, $img_upload_path);
     
-                    $result = insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $new_img_name);
+                    $result = insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $new_img_name, $event_status_default);
     
                     if ($result === "success") {
                         echo $result;

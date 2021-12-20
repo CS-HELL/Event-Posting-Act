@@ -123,7 +123,8 @@ function getUserData() {
       if (currentUser.Account_Type == "ADMIN" || currentUser.Account_Type == "ORGANIZER") {
         const content = 
         `
-        <button id="editeventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]"><a href=${path}${post_id}>Edit Event</a></button>
+        <button id="editeventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]"><a style="text-decoration:none; color: black;" href=${path}${post_id}>Edit Event</a></button>
+        <br>
         `;
         $("#cardrounded").append(content);
         $("#cardrounded").append('<button id="canceleventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]">Cancel Event</button>"');

@@ -42,16 +42,16 @@ function retrieve_posts($con)
 function retrieve_event_posts($con)
 {
     $result = $con->query("SELECT e.event_post_id,e.event_author,e.event_title,e.event_location,e.event_description,
-    e.event_start_date_time,e.event_end_date_time,e.event_banner_image
+    e.event_start_date_time,e.event_end_date_time,e.event_banner_image,e.event_status
     FROM `event_posts` e");
 
     return $result;
 }
 
-function insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $event_image)
+function insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $event_image, $event_status)
 {
-    $query = "INSERT INTO event_posts(event_author, event_title, event_location, event_description, event_start_date_time, event_end_date_time, event_banner_image)
-    VALUES ('$author','$event_title','$event_location','$event_description','$event_start','$event_end', '$event_image')";
+    $query = "INSERT INTO event_posts(event_author, event_title, event_location, event_description, event_start_date_time, event_end_date_time, event_banner_image, event_status)
+    VALUES ('$author','$event_title','$event_location','$event_description','$event_start','$event_end', '$event_image', '$event_status')";
 
     $execute = mysqli_query($con, $query);
     if ($execute === true) {
@@ -65,6 +65,18 @@ function retrieve_participants($con)
 {
     $result = $con->query("SELECT * FROM `event_participants`");
     return $result;
+}
+
+function retrieve_user_events($con, $username) {
+    $result = $con->query("SELECT event_target_id, event_post_id, event_author, event_title, event_location, event_description,
+    event_start_date_time, event_end_date_time, event_banner_image, event_status
+    FROM `event_participants` INNER JOIN `event_posts` ON event_post_id = event_target_id WHERE participant = '$username'");
+
+    $eventids = array();
+    while ($eventid = mysqli_fetch_array($result)) {
+        $eventids[] = $eventid;
+    }
+    return $eventids;
 }
 
 function remove_currentuser_participant($con, $username, $event_post_id)

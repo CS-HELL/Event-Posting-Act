@@ -829,4 +829,8 @@ img {
   border: 1px solid #313a5c;
   cursor: pointer;
 }
+
+#editeventbutton .a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=styles.css.map */

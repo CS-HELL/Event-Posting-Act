@@ -19,13 +19,32 @@ include("header/htmlheader.php");
   </header>
 
   <div class="events py-5"">
+
+
+  <div class=" container">
+    <!-- Row  -->
+    <div class="row justify-content-center">
+      <!-- Column -->
+      <div class="col-md-8 text-center">
+        <h1 class="my-3">Events I am in</h1>
+        <h6 class="subtitle font-weight-normal">The Apes are astonished that you joined so many events!</h6>
+      </div>
+
+    </div>
+    <div class="row-mt-4" id="participated-events-row">
+      <!-- Dynamic Content ongoing-events-row (JS) -->
+    </div>
+  </div>
+
+
+
   <div class=" container">
     <!-- Row  -->
     <div class="row justify-content-center">
       <!-- Column -->
       <div class="col-md-8 text-center">
         <h1 class="my-3">Ongoing Events</h1>
-        <h6 class="subtitle font-weight-normal">You can relay on our amazing features list and also our customer services will be great experience for you without doubt</h6>
+        <h6 class="subtitle font-weight-normal">Relay the flame, who will come out victorious? What's this?</h6>
       </div>
 
     </div>
@@ -44,7 +63,7 @@ include("header/htmlheader.php");
       <!-- Column -->
       <div class="col-md-8 text-center">
         <h1 class="my-3">Upcoming Events</h1>
-        <h6 class="subtitle font-weight-normal">You can relay on our amazing features list and also our customer services will be great experience for you without doubt</h6>
+        <h6 class="subtitle font-weight-normal">Wait for the ice to melt and start crushing what's left of it!</h6>
       </div>
     </div>
 

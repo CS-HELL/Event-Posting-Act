@@ -7,8 +7,8 @@ const path = urlProtocol+"//"+urlHostname+"/ApesStronk/eventdetails.php?event_po
 $("#eventpage").ready(function () {
 
     getEvents("ongoingEventsDetails", "ongoing-events-row");
-
     getEvents("upcomingEventsDetails", "upcoming-events-row");
+    getEvents("participatedEventsDetails", "participated-events-row");
 })
 
 
