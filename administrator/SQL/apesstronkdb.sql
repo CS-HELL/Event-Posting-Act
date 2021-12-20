@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 10, 2021 at 02:06 PM
+-- Generation Time: Dec 20, 2021 at 06:20 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `About` varchar(100) NOT NULL,
   PRIMARY KEY (`UID`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accounts`
@@ -50,7 +50,9 @@ INSERT INTO `accounts` (`UID`, `Account_Type`, `Username`, `Password`, `Profile_
 (1, 'ADMIN', 'root', '63a9f0ea7bb98050796b649e85481845', 'root_1.jpg', 'Jeremy', 'Madriaga', '10/21/2021', 'Babonkers'),
 (2, 'ADMIN', 'Saiph', '63a9f0ea7bb98050796b649e85481845', 'saiph_1.jpg', 'Bryan', 'Capistrano', '12/3/2021', 'CSboi'),
 (3, 'ADMIN', 'Teng', '63a9f0ea7bb98050796b649e85481845', 'teng_1.png', 'Austin', 'Andres', '12/03/2021', 'CSnoob'),
-(4, 'MEMBER', 'Memeber', '63a9f0ea7bb98050796b649e85481845', 'exttra_1.png', 'Ara ara', 'Kawaii neko', '11/12/2021', 'Ara ara');
+(4, 'MEMBER', 'Memeber', '63a9f0ea7bb98050796b649e85481845', 'exttra_1.png', 'Ara ara', 'Kawaii neko', '11/12/2021', 'Ara ara'),
+(5, 'ADMIN', 'kaiser', '80c74513e7126a4d94574653b1b7f86d', 'defaultpfp.png', 'Kaiser', 'Napeek', '11/12/2021', ''),
+(6, 'ADMIN', 'miguel', '9eb0c9605dc81a68731f61b3e0838937', 'defaultpfp.png', 'Miguel', 'Ferrer', '11/12/2021', 'elo');
 
 -- --------------------------------------------------------
 
@@ -60,24 +62,32 @@ INSERT INTO `accounts` (`UID`, `Account_Type`, `Username`, `Password`, `Profile_
 
 DROP TABLE IF EXISTS `event_posts`;
 CREATE TABLE IF NOT EXISTS `event_posts` (
-  `event_post_id` int(20) NOT NULL,
-  `event_author_uid` int(20) NOT NULL,
+  `event_post_id` int(20) NOT NULL AUTO_INCREMENT,
+  `event_author` varchar(20) NOT NULL,
   `event_title` varchar(30) NOT NULL,
   `event_location` varchar(100) NOT NULL,
   `event_description` varchar(2000) NOT NULL,
   `event_start_date_time` datetime NOT NULL,
   `event_end_date_time` datetime NOT NULL,
-  `event_banner_image` varchar(500) NOT NULL,
+  `event_banner_image` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`event_post_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `event_posts`
 --
 
-INSERT INTO `event_posts` (`event_post_id`, `event_author_uid`, `event_title`, `event_location`, `event_description`, `event_start_date_time`, `event_end_date_time`, `event_banner_image`) VALUES
-(1, 1, 'Africa Games Week 2021', 'Baguio City', 'Off the back of the last 4 year’s events Africa Games Week continues to drive exposure, opportunities, knowledge and investment to African Game Developers connecting them to the world. AGW', '2021-12-10 00:00:00', '2021-12-15 03:00:00', 'defaultpfp.png'),
-(2, 2, 'PAX Unplugged 2021', 'Castillejos, Zambales', 'PAX Unplugged 2021 will be an exciting analog-focused extension of our already existing portfolio of PAX events. We’ve found that the Tabletop parts of PAX have grown and grown to', '2021-12-15 17:52:59', '2021-12-23 17:52:59', 'exttra_1.png');
+INSERT INTO `event_posts` (`event_post_id`, `event_author`, `event_title`, `event_location`, `event_description`, `event_start_date_time`, `event_end_date_time`, `event_banner_image`) VALUES
+(1, 'root', 'Africa Games Week 2021', 'Baguio City', 'Off the back of the last 4 year’s events Africa Games Week continues to drive exposure, opportunities, knowledge and investment to African Game Developers connecting them to the world. AGW', '2021-12-10 00:00:00', '2021-12-15 03:00:00', 'defaultpfp.png'),
+(2, 'Saiph', 'PAX Unplugged 2021', 'Castillejos, Zambales', 'PAX Unplugged 2021 will be an exciting analog-focused extension of our already existing portfolio of PAX events. We’ve found that the Tabletop parts of PAX have grown and grown to', '2021-12-15 17:52:59', '2021-12-23 17:52:59', 'exttra_1.png'),
+(3, 'Saiph', 'wqe', 'qwew', 'asd', '2021-12-21 12:00:00', '2021-12-22 12:00:00', NULL),
+(4, 'root', 'sd', 'sd', 'asd', '2021-12-22 12:00:00', '2021-12-22 12:00:00', NULL),
+(5, 'root', 'df', 'df', 'df', '2021-12-22 12:00:00', '2021-12-22 12:00:00', ''),
+(6, 'root', 'df', 'df', 'df', '2021-12-23 12:00:00', '2021-12-23 12:00:00', ''),
+(7, 'root', 'sd', 'sd', 'asd', '2021-12-22 12:00:00', '2021-12-22 12:00:00', ''),
+(8, 'root', 'sd', 'sd', 'sd', '2021-12-16 12:00:00', '2021-12-16 12:00:00', ''),
+(9, 'root', 'sd', 'sd', 'sd', '2021-12-23 12:00:00', '2021-12-23 12:00:00', ''),
+(10, 'root', 'asd', 'asd', 'asd', '2021-12-23 12:00:00', '2021-12-23 12:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -87,7 +97,7 @@ INSERT INTO `event_posts` (`event_post_id`, `event_author_uid`, `event_title`, `
 
 DROP TABLE IF EXISTS `user_posts`;
 CREATE TABLE IF NOT EXISTS `user_posts` (
-  `post_id` int(50) NOT NULL,
+  `post_id` int(50) NOT NULL AUTO_INCREMENT,
   `post_author_uid` int(100) NOT NULL,
   `post_type` enum('Regular','Media','Poll','Event') NOT NULL,
   `post_datetime` varchar(50) NOT NULL,
@@ -97,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `user_posts` (
   `post_image` longtext,
   `likers_uid` int(100) DEFAULT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_posts`

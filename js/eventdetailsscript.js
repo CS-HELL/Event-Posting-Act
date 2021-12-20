@@ -33,7 +33,7 @@ function getPostData(eventPost_ID) {
 
       $("#event-pic").attr("src", pathToeventBanners+eventPost.event_banner_image);
 
-      $("#eventAuthor").append(eventPost.Username);
+      $("#eventAuthor").append(eventPost.event_author);
       $("#eventDetails").append(eventPost.event_description);
     }
   });

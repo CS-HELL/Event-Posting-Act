@@ -37,32 +37,29 @@ include("header/htmlheader.php");
 
                                 <form id="event_post" method="post">
                                     <h2>Create Event Post</h2>
-                                    <input id="fname" name="name" type="text" placeholder="Title (Required)" autocomplete="off" class="form-control">
+                                    <input id="title" name="eventtitle" type="text" placeholder="Title (Required)" autocomplete="off" class="form-control">
 
                                     <label class="label">Location</label>
-                                    <input list="browsers" name="browser" class="form-control">
+                                    <input list="browsers" name="eventlocation" class="form-control">
                                     <datalist id="browsers">
                                         <option value="Virtual">
                                     </datalist>
 
                                     <label class="label">Event Start:</label>
-                                    <input type="datetime-local" id="eventstartdatetime" class="form-control" placeholder="Start Date Time (Required)">
+                                    <input type="datetime-local" name="eventstartdatetime" id="eventstartdatetime" class="form-control" placeholder="Start Date Time (Required)">
 
                                     <label class="label">Event Ends:</label>
-                                    <input type="datetime-local" id="eventenddatetime" class="form-control" placeholder="End Date Time (Required)">
+                                    <input type="datetime-local" name="eventenddatetime" id="eventenddatetime" class="form-control" placeholder="End Date Time (Required)">
 
                                     <label class="label">Event Details:</label>
-                                    <textarea class="form-control" id="eventdetails" placeholder="Insert Event Details" rows="7"></textarea>
+                                    <textarea class="form-control" name="eventdetails" id="eventdetails" placeholder="Insert Event Details" rows="7"></textarea>
 
                                     <label class="label">Image</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="validatedCustomFile">
-                                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                                        <div class="invalid-feedback">Example invalid custom file feedback</div>
-                                    </div>
+                                    <input type="file" name="image" id="image" />
 
-                                    &nbsp;
-                                    <input type="submit" id="submitbutton" class="posteventbtn">Post Event</input>
+
+                                    <label class="label" id="statusmessage"></label>
+                                    <input type="submit" id="submitbutton" class="posteventbtn"></input>
 
                                 </form>
                             </div>
