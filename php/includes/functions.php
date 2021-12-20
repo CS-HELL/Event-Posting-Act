@@ -38,23 +38,22 @@ function retrieve_posts($con){
  * $con is the handler for the database configuration
  */
 function retrieve_event_posts($con) {
-    $result = $con->query("SELECT e.event_post_id,e.event_author_uid,a.Username,e.event_title,e.event_location,e.event_description,
+    $result = $con->query("SELECT e.event_post_id,e.event_author,e.event_title,e.event_location,e.event_description,
     e.event_start_date_time,e.event_end_date_time,e.event_banner_image
-    FROM `event_posts` e
-    JOIN `accounts` a ON a.UID = e.event_author_uid");
+    FROM `event_posts` e");
     
     return $result;
 }
 
-function insert_event($con, $author_uid, $event_title, $event_location, $event_description, $event_start, $event_end, $event_banner_image) {
-    $query = "INSERT INTO event_posts(event_author_uid, event_title, event_location, event_description, event_start_date_time, event_end_date_time, event_banner_image)
-    VALES('$author_uid','$event_title','$event_location','$event_description','$event_start','$event_end','$event_banner_image')";
+function insert_event($con, $author, $event_title, $event_location, $event_description, $event_start, $event_end, $event_image) {
+    $query = "INSERT INTO event_posts(event_author, event_title, event_location, event_description, event_start_date_time, event_end_date_time, event_banner_image)
+    VALUES ('$author','$event_title','$event_location','$event_description','$event_start','$event_end', '$event_image')";
     
     $execute=mysqli_query($con, $query);
-    if($execute == true) {
-        return "Success";
+    if($execute === true) {
+        return "success";
     } else {
-        return "Error";
+        return "error";
     }
 }
 
@@ -75,6 +74,7 @@ function redirectToHomePage() {
     header('Location: index.php');
     exit();
 }
+
 
 function redirectToErrorPage() {
 
