@@ -7,7 +7,7 @@ if (isset($_GET['retrieveEventPosts'])) {
 
     $eventsResult = retrieve_event_posts($con);
     $date_default_timezone_set = ('Philippines');
-    $date_today = date('Y-m-d H:m:s');
+    $date_today = date('Y-m-d H:i:ss');
 
     switch ($_GET['retrieveEventPosts']) {
         
@@ -23,8 +23,8 @@ if (isset($_GET['retrieveEventPosts'])) {
                     $event_start_date_time = new DateTime($ongoing_eventData['event_start_date_time']);
                     $event_end_date_time = new DateTime($ongoing_eventData['event_end_date_time']);
 
-                    $formatted_event_start_date_time = $event_start_date_time->format('Y-m-d H:m:s');
-                    $formatted_event_end_date_time = $event_end_date_time->format('Y-m-d H:m:s');
+                    $formatted_event_start_date_time = $event_start_date_time->format('Y-m-d H:i:ss');
+                    $formatted_event_end_date_time = $event_end_date_time->format('Y-m-d H:i:ss');
                     
                     if(($date_today >= $formatted_event_start_date_time) && ($date_today <= $formatted_event_end_date_time)) { 
                         $ongoingeventsArray[] = mb_convert_encoding($ongoing_eventData, 'UTF-8', 'UTF-8');
@@ -51,8 +51,8 @@ if (isset($_GET['retrieveEventPosts'])) {
                     $event_start_date_time = new DateTime($ongoing_eventData['event_start_date_time']);
                     $event_end_date_time = new DateTime($ongoing_eventData['event_end_date_time']);
 
-                    $formatted_event_start_date_time = $event_start_date_time->format('Y-m-d H:m:s');
-                    $formatted_event_end_date_time = $event_end_date_time->format('Y-m-d H:m:s');
+                    $formatted_event_start_date_time = $event_start_date_time->format('Y-m-d H:i:ss');
+                    $formatted_event_end_date_time = $event_end_date_time->format('Y-m-d H:i:ss');
                     
                     if($date_today < $formatted_event_start_date_time) { 
                         $upcomingEvents[] = mb_convert_encoding($ongoing_eventData, 'UTF-8', 'UTF-8');

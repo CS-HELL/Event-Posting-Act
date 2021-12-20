@@ -46,6 +46,18 @@ function retrieve_event_posts($con) {
     return $result;
 }
 
+function insert_event($con, $author_uid, $event_title, $event_location, $event_description, $event_start, $event_end, $event_banner_image) {
+    $query = "INSERT INTO event_posts(event_author_uid, event_title, event_location, event_description, event_start_date_time, event_end_date_time, event_banner_image)
+    VALES('$author_uid','$event_title','$event_location','$event_description','$event_start','$event_end','$event_banner_image')";
+    
+    $execute=mysqli_query($con, $query);
+    if($execute == true) {
+        return "Success";
+    } else {
+        return "Error";
+    }
+}
+
 
 
 
