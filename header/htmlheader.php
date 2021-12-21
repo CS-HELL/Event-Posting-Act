@@ -19,3 +19,4 @@
 <!-- Bootstrap CSS  -->
 <!-- Bootstrap JS   -->
 <!-- JQUERY -->
+<!-- MOST REFERENCES ARE FROM w3SCHOOL AND tutorialspoint -->
