@@ -9,6 +9,7 @@ $("#eventpage").ready(function () {
     getEvents("ongoingEventsDetails", "ongoing-events-row");
     getEvents("upcomingEventsDetails", "upcoming-events-row");
     getEvents("participatedEventsDetails", "participated-events-row");
+    getEvents("cancelledEventsDetails", "cancelled-events-row");
 })
 
 

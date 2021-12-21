@@ -73,6 +73,25 @@ include("header/htmlheader.php");
 
   </div>
 
+
+  <div class="container">
+    <!-- Row  -->
+    <div class="row justify-content-center">
+
+      <!-- Column -->
+      <div class="col-md-8 text-center">
+        <h1 class="my-3">Cancelled Events</h1>
+        <h6 class="subtitle font-weight-normal">Ara... Wait for further announcements!</h6>
+      </div>
+    </div>
+
+    <div class="row-mt-4" id="cancelled-events-row">
+      <!-- Dynamic Content upcoming-events-row (JS) -->
+    </div>
+
+  </div>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" language="javascript" src="js/navigationscript.js"></script>
   <script type="text/javascript" language="javascript" src="js/eventpagescript.js"></script>

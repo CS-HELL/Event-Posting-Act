@@ -7,6 +7,7 @@ const path = urlProtocol+"//"+urlHostname+"/ApesStronk/updatepostevents.php?even
 
 var username = "";
 var post_id = "";
+var isCancelled = false;
 var participants = [];
 
 // Script for index.php
@@ -17,12 +18,14 @@ $(document).ready(function () {
   const eventPost_ID = urlParams.get('event_post_id');
 
   getUserData();
+
   getPostData(eventPost_ID);
 
   getParticipants(eventPost_ID);
   currentUserIsParticipant(eventPost_ID);
 
-
+  IsEventCancelled(eventPost_ID);
+  
   $("#verifyjoin").click(function () {
     $.ajax({
       url: "php/eventsHandler.php",
@@ -48,7 +51,24 @@ $(document).ready(function () {
       }
     });
   })
-
+  $("#verifycancel").click(function () {
+    $.ajax({
+      url: "php/canceleventsHandler.php",
+      method: "POST",
+      dataType: "text",
+      data: {
+        cancel: eventPost_ID
+      }, success: function (data) {
+         window.location = "eventpage.php";
+      }
+    });
+  })
+  $("#verifyrecover").click(function () {
+    recoverEvent(eventPost_ID);
+  })
+  $("#verifydelete").click(function () {
+    deleteEvent(eventPost_ID);
+  })
 
 
 });
@@ -78,6 +98,8 @@ function getPostData(eventPost_ID) {
 
       $("#eventAuthor").append(eventPost.event_author);
       $("#eventDetails").append(eventPost.event_description);
+
+      
 
     }
   });
@@ -127,7 +149,6 @@ function getUserData() {
         <br>
         `;
         $("#cardrounded").append(content);
-        $("#cardrounded").append('<button id="canceleventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]">Cancel Event</button>"');
       }
     }
   });
@@ -150,6 +171,65 @@ function currentUserIsParticipant(eventPost_ID) {
 
         case "no" : 
         $("#cardrounded").append('<button id="validatejoin" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#validateJoinModal">Join</button>"');
+        break;
+      }
+
+    }
+  });
+}
+
+function IsEventCancelled(eventPost_ID){
+  $.ajax({
+    url: "php/eventsHandler.php",
+    method: "POST",
+    dataType: "text",
+    data: {
+      isCancelled: eventPost_ID
+    }, success: function (data) {
+      console.log(data);
+      switch(data) {
+        case "yes" : 
+        $("#cardrounded").append('<button id="deleteeventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#deletemodal">Delete Event</button>"');
+        $("#cardrounded").append('<button id="recovereventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#recovermodal">Recover Event</button>"');
+        $("#participants").hide();
+        $("#validatejoin").hide();
+        $("#validateunjoin").hide();
+        break;
+
+        case "no" : 
+        $("#cardrounded").append('<button id="canceleventbutton" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#cancelmodal">Cancel Event</button>"');
+        break;
+      }
+
+    }
+  });
+}
+
+function deleteEvent(eventPost_ID){
+  $.ajax({
+    url: "php/eventsHandler.php",
+    method: "POST",
+    dataType: "text",
+    data: {
+      deleteEvent: eventPost_ID
+    }, success: function () {
+      window.location = "eventPage.php";
+    }
+  });
+}
+
+function recoverEvent(eventPost_ID){
+  $.ajax({
+    url: "php/eventsHandler.php",
+    method: "POST",
+    dataType: "text",
+    data: {
+      recoverEvent: eventPost_ID
+    }, success: function (data) {
+      console.log(data);
+      switch(data) {
+        case "success" : 
+        window.location = "eventPage.php";
         break;
       }
 

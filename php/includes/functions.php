@@ -132,6 +132,43 @@ function update_event_post($con, $event_post_id, $event_title, $event_location, 
     }
 }
 
+function cancel_event_post($con, $event_post_id)
+{
+    $query = "UPDATE event_posts SET event_status = 'cancelled'
+    WHERE event_post_id = $event_post_id";
+
+    $execute = mysqli_query($con, $query);
+    if ($execute == true) {
+        return "success";
+    } else {
+        return "error";
+    }
+}
+
+function deleteEvent($con, $event_id) {
+    $query = "DELETE FROM event_posts 
+    WHERE event_post_id = $event_id";
+
+    $execute = mysqli_query($con, $query);
+    if ($execute == true) {
+        return "success";
+    } else {
+        return "error";
+    }
+}
+
+function recoverEvent($con, $event_id) {
+    $query = "UPDATE event_posts 
+    SET event_status = 'live' WHERE event_post_id = '$event_id'";
+
+    $execute = mysqli_query($con, $query);
+    if ($execute == true) {
+        return "success";
+    } else {
+        return "error";
+    }
+}
+
 
 
 

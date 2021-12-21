@@ -77,9 +77,27 @@ if (isset($_GET['retrieveEventPosts'])) {
             }
         
             echo json_encode($myEvents);
-                
-            
+    
+            break;
 
+        case 'cancelledEventsDetails':
+
+            $cancelled = array();
+
+            if (mysqli_num_rows($eventsResult) > 0) {
+
+                while ($ongoing_eventData = mysqli_fetch_assoc($eventsResult)) {
+
+                    if ($ongoing_eventData['event_status'] === 'cancelled') {
+                        $cancelled[] = mb_convert_encoding($ongoing_eventData, 'UTF-8', 'UTF-8');
+                    }
+                }
+
+                echo json_encode($cancelled);
+            } else {
+                echo "Error";
+            }
+    
             break;
     }
 } else if (isset($_POST['getEventPost'])) {
@@ -139,6 +157,40 @@ if (isset($_GET['retrieveEventPosts'])) {
     $isParticipant = find_if_currentuser_is_participant($con, $current_user_participant, $event_post_id);
 
     echo $isParticipant;
-} else {
+}  else if (isset($_POST['isCancelled'])) {
+    $event_post_id = $con->real_escape_string($_POST['isCancelled']);
+    $eventpostsResult = retrieve_event_posts($con);
+    $boolean = false;
+
+    if (mysqli_num_rows($eventpostsResult) > 0) {
+        while ($eventData = mysqli_fetch_assoc($eventpostsResult)) {
+            if (($event_post_id == $eventData['event_post_id']) && ($eventData['event_status'] == "cancelled")) {
+                $boolean = true;
+            }
+        } 
+        
+    } else {
+        echo "error";
+    }
+
+    if ($boolean == true) {
+        echo "yes";
+    } else {
+        echo "no";
+    }
+    
+} else if (isset($_POST['deleteEvent'])) {
+    $event_post_id = $con->real_escape_string($_POST['deleteEvent']);
+
+    $result = deleteEvent($con, $event_post_id);
+    echo $result;
+    
+} else if (isset($_POST['recoverEvent'])) {
+    $event_post_id = $con->real_escape_string($_POST['recoverEvent']);
+    
+    $result = recoverEvent($con, $event_post_id);
+    echo $result;
+    
+}else {
     echo "error";
 }
