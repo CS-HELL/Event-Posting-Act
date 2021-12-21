@@ -2,7 +2,7 @@
 include("header/htmlheader.php");
 include("php/sessionHandler.php");
 ?>
-
+<!-- Videz -->
 <body>
     <header>
         <a class="name" href="index.php">AsTronK</a>
@@ -36,18 +36,6 @@ include("php/sessionHandler.php");
         </div>
     </div>
 
-
-    <!-- <div class="container">
-    <div class="sidebar-left" id="sidebar-left">
-     
-    </div>
-
-    <div class="middle-content" id="mid-content">
-      
-    </div>
-
-    <div class="sidebar-right"></div>
-  </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/navigationscript.js"></script>
     <script type="text/javascript" language="javascript" src="js/postdetailsscript.js"></script>
@@ -59,12 +47,3 @@ include("php/sessionHandler.php");
 <footer></footer>
 
 </html>
-
-
-<!-- <div class="panel-post-tags">
-          <ul>
-            <li>Post Regular</li>
-            <li>Post Event</li>
-            <li>Post Poll</li>
-          </ul>
-        </div> -->

@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+// Madriaga - Andres
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');
 

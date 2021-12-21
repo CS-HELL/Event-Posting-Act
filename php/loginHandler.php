@@ -4,6 +4,7 @@ session_start();
 /**
  * This handler is responsible for validating the username and password fields 
  * and setting the session cookie with the username.
+ * Madriaga
  */
 
 include('includes/dbconnectionHandler.php');
@@ -20,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $userdata = mysqli_fetch_assoc($result);
             if ($userdata['Password'] === md5($password)) {
                 $_SESSION['Username'] = $userdata['Username'];
+                $_SESSION['UID'] = $userdata['UID'];
                 echo "Success";
                 die;
             }

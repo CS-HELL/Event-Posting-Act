@@ -79,6 +79,7 @@ $(document).ready(function () {
  * 
  * The post_id is the id of the post that is retrieved from the url.
  * @param {*} post_id 
+ * Madriaga
  */
 function getPostData(eventPost_ID) {
   $.ajax({
@@ -105,6 +106,7 @@ function getPostData(eventPost_ID) {
   });
 }
 
+// Madriaga
 function getParticipants(eventPost_ID) {
   $.ajax({
     url: "php/eventsHandler.php",
@@ -133,6 +135,7 @@ function getParticipants(eventPost_ID) {
 }
 
 
+// Madriaga
 function getUserData() {
   $.ajax({
     type: "GET",
@@ -155,6 +158,7 @@ function getUserData() {
 }
 
 
+// Madriaga
 function currentUserIsParticipant(eventPost_ID) {
   $.ajax({
     url: "php/eventsHandler.php",
@@ -178,6 +182,7 @@ function currentUserIsParticipant(eventPost_ID) {
   });
 }
 
+// Napeek - Ferrer
 function IsEventCancelled(eventPost_ID){
   $.ajax({
     url: "php/eventsHandler.php",
@@ -205,6 +210,7 @@ function IsEventCancelled(eventPost_ID){
   });
 }
 
+// Napeek - Ferrer
 function deleteEvent(eventPost_ID){
   $.ajax({
     url: "php/eventsHandler.php",
@@ -218,6 +224,7 @@ function deleteEvent(eventPost_ID){
   });
 }
 
+// Napeek - Ferrer
 function recoverEvent(eventPost_ID){
   $.ajax({
     url: "php/eventsHandler.php",

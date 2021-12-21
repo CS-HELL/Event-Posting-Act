@@ -1,6 +1,7 @@
 var pathToPfps = "img/uploadedpfp/"
 
 // Universal Script for left-right navigation
+// Andres
 $(document).ready(function () {
   // Generate Posts from data echoed by postsHandler
   $.ajax({

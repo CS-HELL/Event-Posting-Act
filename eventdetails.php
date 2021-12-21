@@ -2,7 +2,7 @@
 include("php/sessionHandler.php");
 include("header/htmlheader.php");
 ?>
-
+<!-- Andres -->
 <body id="eventdetails">
 
     <header>
@@ -25,10 +25,8 @@ include("header/htmlheader.php");
                         <div class="cover">
                             <div class="gray-shade">
 
-                                <!-- <div class="registration-form" id="popup"> -->
                                 <div class="back-link">
                                     <a href="eventpage.php" id="loginFormButton"><i class="fa fa-arrow-circle-left" style="font-size:40px"></i></a>
-                                    <!-- </div> -->
 
                                 </div>
                             </div>
@@ -95,8 +93,7 @@ include("header/htmlheader.php");
                                 
                                 <br>
                                 <button id="participants" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#participantsModal">Participants</button>"
-                                <!-- <button id="validateunjoin" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#validateUnjoinModal">Unjoin</button>
-                                <button id="validatejoin" style="background: rgb(182, 182, 182);" type="button" class="[ btn btn-default ]" data-toggle="modal" data-target="#validateJoinModal">Join</button>" -->
+                    
                             </div>
                         </div>
                     </div>

@@ -2,7 +2,7 @@
 include("php/sessionHandler.php");
 include("header/htmlheader.php");
 ?>
-
+<!-- Andres -->
 <body id="eventpage">
 
   <header>

@@ -3,7 +3,7 @@
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');
 
-
+// Capistrano
 
 if (isset($_GET['RetrievePosts'])) {
 

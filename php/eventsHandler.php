@@ -1,4 +1,5 @@
 <?php
+// Napeek - Ferrer - Madriaga
 session_start();
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');

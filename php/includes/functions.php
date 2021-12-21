@@ -27,7 +27,7 @@ function check_login($con)
  */
 function retrieve_posts($con)
 {
-    $result = $con->query("SELECT post_id,post_author_uid,accounts.Username,accounts.Profile_Pic,post_type,post_datetime,post_title,post_content,likers_uid
+    $result = $con->query("SELECT post_id,post_author_uid,accounts.Username,accounts.Profile_Pic,post_datetime,post_title,post_content
     FROM `user_posts` 
     INNER JOIN `accounts` 
     ON accounts.UID = user_posts.post_author_uid");
@@ -160,6 +160,19 @@ function deleteEvent($con, $event_id) {
 function recoverEvent($con, $event_id) {
     $query = "UPDATE event_posts 
     SET event_status = 'live' WHERE event_post_id = '$event_id'";
+
+    $execute = mysqli_query($con, $query);
+    if ($execute == true) {
+        return "success";
+    } else {
+        return "error";
+    }
+}
+
+function insert_post($con, $uid, $datetime, $title, $content)
+{
+    $query = "INSERT INTO user_posts(post_author_uid, post_datetime, post_title, post_content)
+    VALUES ('$uid', '$datetime', '$title', '$content')";
 
     $execute = mysqli_query($con, $query);
     if ($execute == true) {

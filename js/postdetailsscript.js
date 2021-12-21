@@ -1,6 +1,7 @@
 var pathToPfps = "img/uploadedpfp/"
 
 // Script for index.php
+// Andres
 $(document).ready(function () {
   // Generate Posts from data echoed by postsHandler
   const urlString = window.location.search;
@@ -42,8 +43,6 @@ function getPostData(post_id) {
             <p>${post.post_content}</p>
           </div>
           <div class="panel-footer">
-            <button type="button" class="[ btn btn-default ]" id="like-button"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-            <button type="button" class="[ btn btn-default ]" id="comment-button">Comment</button>
           </div>
           </div>
           `;

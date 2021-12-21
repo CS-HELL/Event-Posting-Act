@@ -1,5 +1,6 @@
 // Format for date picker.
 // Flatpickr is used.
+// Madriaga
 flatpickr("input[type=datetime-local]", {
     enableTime: true,
     dateFormat: "Y-m-d H:i:ss",

@@ -5,6 +5,7 @@ const urlProtocol = window.location.protocol;
 const path = urlProtocol+"//"+urlHostname+"/ApesStronk/postdetails.php?post_id=";
 
 // Script for index.php
+// Capistrano
 $(document).ready(function () {
 
   RetrieveAndGeneratePosts("RetrieveAllPosts", "mid-content"); 
@@ -16,6 +17,7 @@ $(document).ready(function () {
 
 });
 
+// Capistrano
 function RetrieveAndGeneratePosts(RetrievePosts, parentID) {
   // Generate Posts from data echoed by postsHandler
   $.ajax({
@@ -48,8 +50,7 @@ function RetrieveAndGeneratePosts(RetrievePosts, parentID) {
             <p>${value.post_content}</p>
           </div>
           <div class="panel-footer">
-            <button type="button" class="[ btn btn-default ]" id="like-button"><i class="fa fa-thumbs-up fa-1x like" aria-hidden="true"></i></button>
-            <button type="button" class="[ btn btn-default ]"><a href="${path}${value.post_id}" target="_blank">Comment</button>
+            <button type="button" class="[ btn btn-default ]"><a href="${path}${value.post_id}" target="_blank">View Link</button>
             
           </div>
           </div>

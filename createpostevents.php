@@ -2,7 +2,7 @@
 include("php/sessionHandler.php");
 include("header/htmlheader.php");
 ?>
-
+<!-- Andres -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 <body id="createpostevents">
@@ -118,29 +118,6 @@ include("header/htmlheader.php");
             </div>
         </div>
     </div>
-
-
-
-
-    <!-- <div class="modal-container" id="modal-container">
-        <div class="modal">
-            <h2>Are you sure you want to submit this event?</h2>
-            <h2>Details:</h2>
-            <p>Title: </p>
-            <p>Location: </p>
-            <p>Start Date: </p>
-            <p>End Date: </p>
-            <p>Details: </p>
-            <button type="button" id="submit">Submit</button>
-            <button type="button" id="close">Close</button>
-        </div>
-        
-    </div> -->
-
-
-
-
-
 
 </body>
 

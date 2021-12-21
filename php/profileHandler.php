@@ -1,6 +1,6 @@
 
 <?php
-
+// Madriaga - Capistrano
 session_start();
 include('includes/dbconnectionHandler.php');
 include('includes/functions.php');

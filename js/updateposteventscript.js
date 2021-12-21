@@ -10,6 +10,7 @@ const eventPost_ID = urlParams.get('event_post_id');
 
 // Format for date picker.
 // Flatpickr is used.
+// Madriaga - Andres
 flatpickr("input[type=datetime-local]", {
     enableTime: true,
     dateFormat: "Y-m-d H:i:ss",

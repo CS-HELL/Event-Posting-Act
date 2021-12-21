@@ -14,3 +14,8 @@
   <link rel="stylesheet" href="styles/posts.css">
   <link rel="stylesheet" href="styles/event.css">
 </head>
+
+<!-- APIS / Sources -->
+<!-- Bootstrap CSS  -->
+<!-- Bootstrap JS   -->
+<!-- JQUERY -->

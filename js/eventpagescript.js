@@ -4,6 +4,7 @@ const urlHostname = window.location.hostname;
 const urlProtocol = window.location.protocol;
 const path = urlProtocol+"//"+urlHostname+"/ApesStronk/eventdetails.php?event_post_id=";
 
+// Madriaga
 $("#eventpage").ready(function () {
 
     getEvents("ongoingEventsDetails", "ongoing-events-row");
@@ -17,6 +18,7 @@ $("#eventpage").ready(function () {
  * This function is used to get events from the database and update the event banner with the new event banner.
  * @param {*} event
  * @param {*} parentID 
+ * Madriaga
  */
 function getEvents(eventStatus, parentID) {
     $.ajax({
